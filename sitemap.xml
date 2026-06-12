@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core Pages -->
+  <url><loc>https://wrdkit.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wrdkit.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wrdkit.com/about.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://wrdkit.com/privacy.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://wrdkit.com/terms.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://wrdkit.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
+
+  <!-- Text Analysis Tools -->
+  <url><loc>https://wrdkit.com/tools/word-counter.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wrdkit.com/tools/character-counter.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wrdkit.com/tools/sentence-counter.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/paragraph-counter.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/reading-time.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wrdkit.com/tools/keyword-density.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wrdkit.com/tools/most-used-words.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/add-line-breaks.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Text Conversion Tools -->
+  <url><loc>https://wrdkit.com/tools/uppercase.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/lowercase.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/title-case.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/reverse-text.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wrdkit.com/tools/remove-spaces.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wrdkit.com/tools/remove-line-breaks.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wrdkit.com/tools/capitalize-text.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wrdkit.com/tools/slug-generator.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Write Better Tools -->
+  <url><loc>https://wrdkit.com/tools/random-word.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wrdkit.com/tools/lorem-ipsum.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/text-repeater.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wrdkit.com/tools/typing-speed.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/rhyming-words.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wrdkit.com/tools/password-generator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Social Media Tools -->
+  <url><loc>https://wrdkit.com/tools/twitter-counter.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/instagram-counter.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/tools/tiktok-counter.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wrdkit.com/tools/bio-generator.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Blog Articles -->
+  <url><loc>https://wrdkit.com/blog/word-count-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/blog/keyword-density-seo.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/blog/improve-typing-speed.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/blog/twitter-character-limits.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/blog/readability-score-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/blog/seo-content-length.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/blog/case-converter-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/blog/instagram-caption-length.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wrdkit.com/blog/lorem-ipsum-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>

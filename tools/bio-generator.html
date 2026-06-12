@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bio Generator — Free Social Media Bio Generator | WrdKit</title>
+<meta name="description" content="Free online bio generator for Twitter, Instagram, LinkedIn and TikTok. Generate a professional bio instantly. No signup required."/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a><ul class="nav-links"><li class="nav-dropdown"><a href="#">Tools ▾</a><div class="nav-dropdown-menu"><div class="dropdown-section">Text Analysis</div><a href="word-counter.html">Word Counter</a><a href="character-counter.html">Character Counter</a><a href="sentence-counter.html">Sentence Counter</a><a href="paragraph-counter.html">Paragraph Counter</a><a href="reading-time.html">Reading Time</a><a href="keyword-density.html">Keyword Density</a><a href="most-used-words.html">Most Used Words</a><div class="dropdown-section">Text Conversion</div><a href="uppercase.html">Uppercase</a><a href="lowercase.html">Lowercase</a><a href="title-case.html">Title Case</a><a href="reverse-text.html">Reverse Text</a><a href="remove-spaces.html">Remove Extra Spaces</a><a href="remove-line-breaks.html">Remove Line Breaks</a><div class="dropdown-section">Writing Tools</div><a href="random-word.html">Random Word Generator</a><a href="lorem-ipsum.html">Lorem Ipsum Generator</a><a href="text-repeater.html">Text Repeater</a><div class="dropdown-section">Social Media</div><a href="twitter-counter.html">Twitter Counter</a><a href="instagram-counter.html">Instagram Counter</a><a href="tiktok-counter.html">TikTok Bio Counter</a></div></li><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li></ul><a href="word-counter.html" class="nav-btn">Try Free →</a></div></nav>
+
+<div class="tool-hero"><div class="tool-hero-inner"><div class="tool-hero-icon icon-purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div><h1>Bio Generator</h1><p>Generate a professional social media bio for any platform instantly.</p></div></div></div>
+
+<div class="tool-shell-wrap"><div class="tool-shell">
+<div class="tool-toolbar"><span class="tool-toolbar-title">Your Details</span><div class="tool-toolbar-actions"><button class="toolbar-btn" onclick="generate()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>Generate</button></div></div>
+
+<div style="padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <label style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Name / Handle</label>
+    <input id="name" type="text" placeholder="e.g. Alex Johnson" style="border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+  </div>
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <label style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Job / Role</label>
+    <input id="role" type="text" placeholder="e.g. Freelance Designer" style="border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+  </div>
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <label style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Interests / Skills</label>
+    <input id="interests" type="text" placeholder="e.g. UX, Branding, Coffee" style="border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:14px;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--accent)'" onblur="this.style.borderColor='var(--border)'">
+  </div>
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <label style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Platform</label>
+    <select id="platform" style="border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:14px;font-family:'Inter',sans-serif;outline:none;background:white;transition:border-color 0.2s;" onchange="generate()">
+      <option value="twitter">Twitter / X (160 chars)</option>
+      <option value="instagram">Instagram (150 chars)</option>
+      <option value="tiktok">TikTok (80 chars)</option>
+      <option value="linkedin">LinkedIn (220 chars)</option>
+    </select>
+  </div>
+</div>
+
+<div class="stat-cards">
+  <div class="stat-card"><span class="stat-card-number" id="bio-chars">0</span><span class="stat-card-label">Characters</span></div>
+  <div class="stat-card"><span class="stat-card-number" id="bio-limit">160</span><span class="stat-card-label">Limit</span></div>
+  <div class="stat-card"><span class="stat-card-number" id="bio-remaining">160</span><span class="stat-card-label">Remaining</span></div>
+</div>
+</div></div>
+
+<div class="tool-shell-wrap" style="margin-top:16px;"><div class="tool-shell">
+<div class="tool-toolbar"><span class="tool-toolbar-title">Generated Bio</span><div class="tool-toolbar-actions"><button class="toolbar-btn" onclick="copyOutput()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button><button class="toolbar-btn" onclick="generate()">Regenerate</button></div></div>
+<div id="output" style="padding:24px;font-size:16px;line-height:1.8;color:var(--text);min-height:100px;font-family:'Inter',sans-serif;white-space:pre-wrap;"></div>
+</div></div>
+
+<div class="tool-content-wrap">
+<div class="tool-faq"><h2>Frequently Asked Questions</h2>
+<div class="faq-item"><h3>What makes a good social media bio?</h3><p>A strong bio answers three questions instantly: who you are, what you do, and why someone should follow you. Keep it specific, use keywords relevant to your field, and include a call to action if space allows.</p></div>
+<div class="faq-item"><h3>How long should a bio be?</h3><p>Each platform has different limits. Twitter/X allows 160 characters, Instagram 150, TikTok 80, and LinkedIn 220. This tool generates bios optimized for each platform's limit.</p></div>
+<div class="faq-item"><h3>Can I edit the generated bio?</h3><p>Yes — the output is editable text. Generate a starting point then customize it with your own voice, specific achievements, or links.</p></div>
+<div class="faq-item"><h3>Is my information stored anywhere?</h3><p>No. Everything runs locally in your browser. Nothing you type here is sent to any server.</p></div>
+</div>
+<div class="related-tools"><h2>Related Tools</h2><div class="related-grid">
+<a href="twitter-counter.html" class="related-card"><div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M4 20L20 4"/></svg></div><div><h4>Twitter Counter</h4><p>Stay within 280 chars</p></div></a>
+<a href="instagram-counter.html" class="related-card"><div class="tool-icon icon-pink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></div><div><h4>Instagram Counter</h4><p>Check caption length</p></div></a>
+<a href="tiktok-counter.html" class="related-card"><div class="tool-icon icon-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></div><div><h4>TikTok Bio Counter</h4><p>Stay within 80 chars</p></div></a>
+<a href="character-counter.html" class="related-card"><div class="tool-icon icon-purple"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div><div><h4>Character Counter</h4><p>Count characters fast</p></div></a>
+</div></div>
+</div>
+
+<footer><a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a><ul class="footer-links"><li><a href="../about.html">About</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../blog.html">Blog</a></li></ul><p class="footer-copy">© 2026 WrdKit. All rights reserved.</p></footer>
+
+<script>
+const limits = { twitter: 160, instagram: 150, tiktok: 80, linkedin: 220 };
+
+const templates = {
+  twitter: [
+    (n,r,i) => `${r} ${n ? `| ${n}` : ''}. Passionate about ${i}. Sharing what I learn along the way.`,
+    (n,r,i) => `${r}. Into ${i}. Building in public.`,
+    (n,r,i) => `${n ? n + ' · ' : ''}${r} · ${i} enthusiast.`
+  ],
+  instagram: [
+    (n,r,i) => `${r} ✦\n${i}\n${n ? '→ ' + n : ''}`,
+    (n,r,i) => `${n ? '👤 ' + n + '\n' : ''}💼 ${r}\n✨ ${i}`,
+    (n,r,i) => `${r}\nLoves: ${i}\n${n ? '↓ ' + n : ''}`
+  ],
+  tiktok: [
+    (n,r,i) => `${r} · ${i}`,
+    (n,r,i) => `${n ? n + ' | ' : ''}${r}`,
+    (n,r,i) => `${i} · ${r}`
+  ],
+  linkedin: [
+    (n,r,i) => `${r} with a passion for ${i}. ${n ? 'Known as ' + n + ' — ' : ''}helping teams and individuals create real impact through thoughtful work.`,
+    (n,r,i) => `${r} | ${i} | ${n ? 'Find me as ' + n : 'Open to new opportunities'}. Focused on delivering results that matter.`
+  ]
+};
+
+let tplIndex = 0;
+
+function generate() {
+  const name = document.getElementById('name').value.trim();
+  const role = document.getElementById('role').value.trim() || 'Creative Professional';
+  const interests = document.getElementById('interests').value.trim() || 'Design, Writing, Tech';
+  const platform = document.getElementById('platform').value;
+  const limit = limits[platform];
+  const tpls = templates[platform];
+  const bio = tpls[tplIndex % tpls.length](name, role, interests);
+  tplIndex++;
+  const trimmed = bio.length > limit ? bio.substring(0, limit - 1) + '…' : bio;
+  document.getElementById('output').textContent = trimmed;
+  document.getElementById('bio-chars').textContent = trimmed.length;
+  document.getElementById('bio-limit').textContent = limit;
+  document.getElementById('bio-remaining').textContent = limit - trimmed.length;
+}
+
+document.getElementById('platform').addEventListener('change', () => { tplIndex = 0; generate(); });
+function copyOutput() { navigator.clipboard.writeText(document.getElementById('output').textContent); }
+</script>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — WrdKit | Writing Tips, SEO Guides, Word Count & Typing Speed Resources</title>
+  <meta name="description" content="WrdKit blog — free guides on word count for SEO, keyword density, ideal blog post length, how to improve typing speed, Twitter character limits, readability scores, and more."/>
+  <meta name="keywords" content="word count guide, keyword density SEO, how to improve typing speed, ideal blog post length, Twitter character limit 2026, readability score guide, free writing tools blog, SEO content length, character count guide, how many words blog post"/>
+  <meta property="og:title" content="WrdKit Blog — Writing, SEO & Text Tool Guides"/>
+  <meta property="og:description" content="Free guides on word count, keyword density, typing speed, social media limits, readability, and more."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://wrdkit.com/blog.html"/>
+  <link rel="canonical" href="https://wrdkit.com/blog.html"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+@font-face {
+  font-family: 'Syne';
+  src: url('fonts/Syne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('fonts/Syne-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+    .blog-hero{padding:100px 40px 60px;max-width:1000px;margin:0 auto;text-align:center}
+    .blog-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);backdrop-filter:blur(10px);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--accent);margin-bottom:28px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+    .blog-hero h1{font-family:'Inter',sans-serif;font-size:56px;font-weight:600;letter-spacing:-3px;line-height:1.05;margin-bottom:20px;-webkit-font-smoothing:antialiased}
+    .blog-hero h1 span{background:linear-gradient(135deg,var(--accent),#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .blog-hero p{font-size:17px;color:var(--muted);max-width:580px;margin:0 auto;line-height:1.7}
+    .category-bar{max-width:1000px;margin:0 auto 40px;padding:0 40px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .cat-pill{background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);border-radius:999px;padding:6px 16px;font-size:13px;font-weight:600;color:var(--muted);backdrop-filter:blur(10px);cursor:pointer;transition:all .2s}
+    .cat-pill.active,.cat-pill:hover{background:var(--accent);color:white;border-color:var(--accent)}
+    .blog-grid-wrap{max-width:1000px;margin:0 auto 80px;padding:0 40px}
+    .featured-post{display:grid;grid-template-columns:1fr 1fr;gap:0;background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);border-radius:24px;overflow:hidden;backdrop-filter:blur(10px);box-shadow:0 4px 20px rgba(0,0,0,0.06);margin-bottom:24px;text-decoration:none;color:var(--text);transition:all .2s}
+    .featured-post:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.1)}
+    .featured-visual{background:linear-gradient(135deg,#EEF2FF,#E0E7FF);padding:48px;display:flex;align-items:center;justify-content:center}
+    .featured-visual .big-num{font-family:'Inter',sans-serif;font-size:80px;font-weight:600;color:var(--accent);letter-spacing:-4px;opacity:.3;-webkit-font-smoothing:antialiased}
+    .featured-body{padding:40px}
+    .featured-body .post-tag{display:inline-flex;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:3px 10px;border-radius:999px;background:#EEF2FF;color:var(--accent);margin-bottom:14px}
+    .featured-body h2{font-family:'Inter',sans-serif;font-size:26px;font-weight:600;letter-spacing:-1px;line-height:1.2;margin-bottom:14px;-webkit-font-smoothing:antialiased}
+    .featured-body p{font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+    .post-meta-row{display:flex;gap:12px;font-size:12px;color:var(--muted)}
+    .featured-body .read-more{font-size:14px;font-weight:700;color:var(--accent)}
+    .posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .post-card{background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);border-radius:20px;padding:28px;backdrop-filter:blur(10px);box-shadow:0 2px 8px rgba(0,0,0,0.04);text-decoration:none;color:var(--text);transition:all .2s;display:flex;flex-direction:column}
+    .post-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.09);border-color:rgba(47,60,237,.12)}
+    .post-card .post-tag{display:inline-flex;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:1px;padding:3px 9px;border-radius:999px;margin-bottom:14px;width:fit-content}
+    .tag-writing{background:#EEF2FF;color:var(--accent)}
+    .tag-seo{background:#ECFDF5;color:#059669}
+    .tag-productivity{background:#FFF7ED;color:#EA580C}
+    .tag-social{background:#FDF4FF;color:#9333EA}
+    .tag-tools{background:#F0F9FF;color:#0284C7}
+    .post-card h3{font-family:'Inter',sans-serif;font-size:17px;font-weight:800;letter-spacing:-.5px;line-height:1.3;margin-bottom:10px;-webkit-font-smoothing:antialiased;flex:1}
+    .post-card p{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:16px}
+    .post-card .card-meta{font-size:12px;color:var(--muted);display:flex;gap:10px;margin-top:auto}
+    .newsletter-wrap{max-width:1000px;margin:0 auto 80px;padding:0 40px}
+    .newsletter-box{background:linear-gradient(135deg,rgba(124,58,237,.07),rgba(255,255,255,.9));border:1px solid rgba(124,58,237,.12);border-radius:24px;padding:48px;text-align:center}
+    .newsletter-box h2{font-family:'Inter',sans-serif;font-size:32px;font-weight:800;letter-spacing:-1.5px;margin-bottom:12px;-webkit-font-smoothing:antialiased}
+    .newsletter-box p{font-size:16px;color:var(--muted);max-width:480px;margin:0 auto 28px;line-height:1.6}
+    .nl-form{display:flex;gap:10px;max-width:440px;margin:0 auto;justify-content:center}
+    .nl-form input{flex:1;padding:12px 18px;border:1px solid var(--border);border-radius:10px;font-size:15px;background:white;outline:none;font-family:'Inter',sans-serif}
+    .nl-form input:focus{border-color:var(--accent)}
+    .nl-form button{background:#7C3AED;color:white;padding:12px 22px;border-radius:10px;font-weight:700;font-size:14px;border:none;cursor:pointer;white-space:nowrap;transition:opacity .2s;font-family:'Inter',sans-serif}
+    .nl-form button:hover{opacity:.85}
+    .nl-note{font-size:12px;color:var(--muted);margin-top:12px}
+    @media(max-width:768px){
+      .blog-hero h1{font-size:34px}
+      .blog-hero,.blog-grid-wrap,.newsletter-wrap,.category-bar{padding-left:20px;padding-right:20px}
+      .featured-post{grid-template-columns:1fr}
+      .featured-visual{display:none}
+      .posts-grid{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "WrdKit Blog",
+    "url": "https://wrdkit.com/blog.html",
+    "description": "Writing tips, SEO guides, word count resources, typing speed improvement, and social media character limit guides from the WrdKit team.",
+    "publisher": {"@type": "Organization", "name": "WrdKit", "url": "https://wrdkit.com"}
+  }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#tools">Tools</a></li>
+        <li><a href="blog.html" style="color:var(--text);font-weight:600">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+      <a href="index.html#tools" class="nav-btn">Try Tools Free →</a>
+    </div>
+  </nav>
+
+  <div class="blog-hero">
+    <div class="blog-badge">✦ Guides for writers, SEOs & students</div>
+    <h1>Write smarter.<br/><span>Rank higher.</span></h1>
+    <p>Free guides on word count targets, keyword density, typing speed, social media character limits, readability scores, and everything else you need to create better content faster.</p>
+  </div>
+
+  <div class="category-bar">
+    <span class="cat-pill active">All</span>
+    <span class="cat-pill">Writing</span>
+    <span class="cat-pill">SEO</span>
+    <span class="cat-pill">Productivity</span>
+    <span class="cat-pill">Social Media</span>
+    <span class="cat-pill">Tools & Guides</span>
+  </div>
+
+  <div class="blog-grid-wrap">
+    <a href="blog/word-count-guide.html" class="featured-post">
+      <div class="featured-visual"><div class="big-num">WC</div></div>
+      <div class="featured-body">
+        <span class="post-tag">Writing</span>
+        <h2>The complete word count guide for 2026 — blog posts, essays, novels & more</h2>
+        <p>Ideal word counts for every content type: SEO blog posts (1,500–2,500 words), college essays (650-word Common App limit), novels by genre (70k–120k words), social media captions, emails, and more.</p>
+        <div class="post-meta-row"><span>📅 June 8, 2026</span><span>⏱ 9 min read</span></div>
+        <div style="margin-top:16px" class="read-more">Read the guide →</div>
+      </div>
+    </a>
+
+    <div class="posts-grid">
+      <a href="blog/keyword-density-seo.html" class="post-card">
+        <span class="post-tag tag-seo">SEO</span>
+        <h3>Keyword density for SEO in 2026: what % to target and how to check it free</h3>
+        <p>The 1–2% rule explained, keyword stuffing penalties, LSI semantic keywords, and how to use our free keyword density checker.</p>
+        <div class="card-meta"><span>📅 Jun 8, 2026</span><span>⏱ 7 min</span></div>
+      </a>
+      <a href="blog/improve-typing-speed.html" class="post-card">
+        <span class="post-tag tag-productivity">Productivity</span>
+        <h3>How to go from 40 WPM to 80 WPM in 30 days</h3>
+        <p>Touch typing fundamentals, the 5 technique fixes that matter most, a week-by-week 30-day practice plan, and how to track progress.</p>
+        <div class="card-meta"><span>📅 Jun 8, 2026</span><span>⏱ 8 min</span></div>
+      </a>
+      <a href="blog/twitter-character-limits.html" class="post-card">
+        <span class="post-tag tag-social">Social Media</span>
+        <h3>Twitter / X character limits in 2026 — every limit explained</h3>
+        <p>280 characters for standard tweets, 4,000 for Premium, URL character counting, thread limits, bio limits.</p>
+        <div class="card-meta"><span>📅 Jun 8, 2026</span><span>⏱ 5 min</span></div>
+      </a>
+      <a href="blog/readability-score-guide.html" class="post-card">
+        <span class="post-tag tag-writing">Writing</span>
+        <h3>Readability scores explained: Flesch-Kincaid, Gunning Fog & what to target</h3>
+        <p>What readability scores mean, what scores to target for your audience, and how to improve yours.</p>
+        <div class="card-meta"><span>📅 Jun 8, 2026</span><span>⏱ 6 min</span></div>
+      </a>
+      <a href="blog/seo-content-length.html" class="post-card">
+        <span class="post-tag tag-seo">SEO</span>
+        <h3>Does content length affect SEO rankings? The 2026 data</h3>
+        <p>Google says word count isn't a ranking factor — but long-form content consistently outranks short pages for competitive keywords.</p>
+        <div class="card-meta"><span>📅 Jun 8, 2026</span><span>⏱ 7 min</span></div>
+      </a>
+      <a href="blog/case-converter-guide.html" class="post-card">
+        <span class="post-tag tag-tools">Tools</span>
+        <h3>UPPERCASE vs Title Case vs Sentence case — when to use each in writing</h3>
+        <p>A complete guide to text case conventions in blog posts, headlines, academic writing, social media, and code.</p>
+        <div class="card-meta"><span>📅 Jun 8, 2026</span><span>⏱ 5 min</span></div>
+      </a>
+      <a href="blog/instagram-caption-length.html" class="post-card">
+        <span class="post-tag tag-social">Social Media</span>
+        <h3>Instagram caption length: how long should your captions actually be?</h3>
+        <p>2,200-character limit vs the 125-char preview — what the data says about optimal caption length for engagement in 2026.</p>
+        <div class="card-meta"><span>📅 Jun 8, 2026</span><span>⏱ 5 min</span></div>
+      </a>
+      <a href="blog/lorem-ipsum-guide.html" class="post-card">
+        <span class="post-tag tag-tools">Tools</span>
+        <h3>Lorem ipsum: origin, meaning, and the best free generators in 2026</h3>
+        <p>Why lorem ipsum is still used 500+ years after its origin, what it actually says, and how to generate it free.</p>
+        <div class="card-meta"><span>📅 Jun 8, 2026</span><span>⏱ 4 min</span></div>
+      </a>
+    </div>
+  </div>
+
+  <div class="newsletter-wrap">
+    <div class="newsletter-box">
+      <h2>Get writing & SEO guides in your inbox</h2>
+      <p>New guides on word count, keyword density, typing speed, and free tool tutorials — sent once a week. No spam. Unsubscribe anytime.</p>
+      <div class="nl-form">
+        <input type="email" placeholder="your@email.com"/>
+        <button type="button">Subscribe free</button>
+      </div>
+      <p class="nl-note">Join 2,000+ writers, students, and SEOs. Free forever.</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+  <script src="js/tools.js"></script>
+</body>
+</html>

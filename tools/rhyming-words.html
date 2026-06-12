@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rhyming Words Finder — Find Rhymes Online Free | WrdKit</title>
+  <meta name="description" content="Free online rhyming words finder. Type any word and instantly get a list of words that rhyme with it. Perfect for poets, songwriters, and students."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#">Tools ▾</a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section">Text Analysis</div>
+            <a href="word-counter.html">Word Counter</a>
+            <a href="character-counter.html">Character Counter</a>
+            <a href="sentence-counter.html">Sentence Counter</a>
+            <a href="paragraph-counter.html">Paragraph Counter</a>
+            <a href="reading-time.html">Reading Time</a>
+            <a href="keyword-density.html">Keyword Density</a>
+            <a href="most-used-words.html">Most Used Words</a>
+            <div class="dropdown-section">Text Conversion</div>
+            <a href="uppercase.html">Uppercase</a>
+            <a href="lowercase.html">Lowercase</a>
+            <a href="title-case.html">Title Case</a>
+            <a href="reverse-text.html">Reverse Text</a>
+            <a href="remove-spaces.html">Remove Extra Spaces</a>
+            <a href="remove-line-breaks.html">Remove Line Breaks</a>
+            <div class="dropdown-section">Writing Tools</div>
+            <a href="random-word.html">Random Word Generator</a>
+            <a href="lorem-ipsum.html">Lorem Ipsum Generator</a>
+            <a href="text-repeater.html">Text Repeater</a>
+            <a href="typing-speed.html">Typing Speed Checker</a>
+            <a href="rhyming-words.html">Rhyming Words Finder</a>
+            <div class="dropdown-section">Social Media</div>
+            <a href="twitter-counter.html">Twitter Counter</a>
+            <a href="instagram-counter.html">Instagram Counter</a>
+            <a href="tiktok-counter.html">TikTok Bio Counter</a>
+          </div>
+        </li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+      <a href="word-counter.html" class="nav-btn">Try Free →</a>
+    </div>
+  </nav>
+
+  <!-- TOOL HERO -->
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="tool-hero-icon icon-pink">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+      </div>
+      <div>
+        <h1>Rhyming Words Finder</h1>
+        <p>Type any word and instantly find words that rhyme with it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOL SHELL -->
+  <div class="tool-shell-wrap">
+    <div class="tool-shell">
+
+      <!-- TOOLBAR -->
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Find Rhymes</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" onclick="clearAll()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- INPUT ROW -->
+      <div class="rhyme-input-wrap">
+        <input
+          type="text"
+          id="rhyme-input"
+          class="rhyme-input"
+          placeholder="Type a word — e.g. mango, rain, fire..."
+          oninput="findRhymes()"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div class="rhyme-count" id="rhyme-count">—</div>
+      </div>
+
+      <!-- RESULTS -->
+      <div class="rhyme-results" id="rhyme-results">
+        <div class="rhyme-empty">Type a word above to find rhymes</div>
+      </div>
+
+      <!-- STAT CARDS -->
+      <div class="stat-cards" style="grid-template-columns: repeat(3,1fr);">
+        <div class="stat-card">
+          <span class="stat-card-number" id="total-rhymes">0</span>
+          <span class="stat-card-label">Rhymes Found</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="ending">—</span>
+          <span class="stat-card-label">Ending Sound</span>
+        </div>
+        <div class="stat-card" style="border-right:none;">
+          <span class="stat-card-number" id="syllable-count">—</span>
+          <span class="stat-card-label">Syllables</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FAQ + RELATED -->
+  <div class="tool-content-wrap">
+
+    <div class="tool-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>How does the rhyme finder work?</h3>
+        <p>It matches words by their ending sounds (phonetic patterns). Words like "rain", "train", and "plain" all share the "-ain" ending and are considered perfect rhymes.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What are near rhymes?</h3>
+        <p>Near rhymes (also called slant rhymes) share similar but not identical sounds. Many modern songs and poems use near rhymes for a more natural flow.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Who is this tool for?</h3>
+        <p>Poets, songwriters, rappers, students, and anyone writing creative content who needs to find words that sound similar for rhythm and flow.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my data stored?</h3>
+        <p>No. Everything runs in your browser. Nothing is sent to any server.</p>
+      </div>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related Tools</h2>
+      <div class="related-grid">
+        <a href="random-word.html" class="related-card">
+          <div class="tool-icon icon-purple"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="16" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></div>
+          <div><h4>Random Word</h4><p>Generate random words</p></div>
+        </a>
+        <a href="typing-speed.html" class="related-card">
+          <div class="tool-icon icon-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7"/><polyline points="6 17 11 12 6 7"/></svg></div>
+          <div><h4>Typing Speed</h4><p>Test your WPM</p></div>
+        </a>
+        <a href="word-counter.html" class="related-card">
+          <div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div>
+          <div><h4>Word Counter</h4><p>Count words instantly</p></div>
+        </a>
+        <a href="lorem-ipsum.html" class="related-card">
+          <div class="tool-icon icon-green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
+          <div><h4>Lorem Ipsum</h4><p>Generate placeholder text</p></div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../terms.html">Terms</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+
+  <style>
+    .rhyme-input-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .rhyme-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 24px;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      color: var(--text);
+      background: transparent;
+      letter-spacing: -0.5px;
+    }
+    .rhyme-input::placeholder {
+      color: #D1D5DB;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    .rhyme-count {
+      font-family: 'Syne', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .rhyme-results {
+      padding: 20px 24px;
+      min-height: 120px;
+      border-bottom: 1px solid var(--border);
+    }
+    .rhyme-empty {
+      color: var(--muted);
+      font-size: 14px;
+      padding: 20px 0;
+    }
+    .rhyme-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .rhyme-group-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .rhyme-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .rhyme-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      background: #F3F4F6;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .rhyme-tag:hover {
+      background: #EEF2FF;
+      border-color: rgba(47,60,237,0.3);
+      color: var(--accent);
+    }
+    .rhyme-tag.perfect {
+      background: #EEF2FF;
+      border-color: rgba(47,60,237,0.2);
+      color: var(--accent);
+      font-weight: 600;
+    }
+  </style>
+
+  <script>
+    // Rhyme database — ending sound → words
+    const rhymeDB = {
+      'ango': ['mango','tango','fango','jango','zango'],
+      'ain': ['rain','train','plain','gain','main','pain','chain','brain','drain','grain','lane','name','fame','game','same','came','claim','flame','frame','shame','tame'],
+      'ight': ['light','night','bright','fight','might','right','sight','tight','white','write','bite','cite','kite','quite','spite','flight','slight','plight','blight','fright','knight','slight'],
+      'ove': ['love','dove','above','shove','glove','of','gov','shove'],
+      'ire': ['fire','hire','wire','tire','desire','admire','inspire','entire','require','retire','expire','higher','buyer','flyer','dryer','prior','liar','choir'],
+      'ound': ['sound','found','round','ground','bound','wound','mound','pound','around','astound','compound','profound','surround','abound','resound','background'],
+      'ong': ['song','long','strong','wrong','along','belong','among','prolong','throng','prong','gong','bong','hong'],
+      'ing': ['ring','sing','spring','thing','bring','king','sting','wing','cling','fling','sling','swing','zing','ping','bling','fring'],
+      'ake': ['cake','lake','make','take','wake','bake','fake','rake','sake','snake','stake','shake','brake','flake','quake','spake'],
+      'ow': ['flow','glow','know','show','slow','snow','grow','blow','crow','throw','below','ago','although','bestow','follow','hollow','meadow','shadow','window','yellow','fellow','elbow','pillow','willow','arrow','borrow','sorrow','narrow'],
+      'ool': ['cool','fool','pool','rule','school','tool','bull','full','pull','wool','drool','spool','stool'],
+      'ine': ['fine','line','mine','nine','pine','vine','wine','dine','shine','spine','twine','shrine','incline','define','decline','combine','design','divine','assign','confine','refine','resign'],
+      'one': ['bone','cone','phone','stone','tone','zone','alone','clone','drone','groan','loan','moan','throne','blown','flown','known','grown','shown','own'],
+      'ee': ['free','tree','see','be','we','key','tea','sea','fee','lee','flee','glee','spree','three','agree','degree','guarantee','referee'],
+      'ay': ['day','way','say','play','stay','gray','pay','ray','bay','clay','display','essay','hooray','subway','today','away','betray','bouquet','decay','delay','relay','repay','survey'],
+      'ate': ['late','great','state','rate','wait','gate','hate','fate','plate','straight','create','debate','inflate','relate','translate','appreciate','celebrate','demonstrate','illustrate','navigate'],
+      'ue': ['blue','true','clue','due','few','flew','grew','knew','new','you','view','who','brew','chew','crew','dew','drew','glue','shoe','threw','through'],
+      'un': ['fun','run','sun','done','gun','one','son','ton','won','begun','outdone','undone','everyone','overcome'],
+      'ead': ['head','bed','fed','led','red','said','wed','ahead','instead','misread','spread','thread','tread','widespread'],
+      'ell': ['bell','cell','fell','sell','tell','well','yell','compel','expel','hotel','motel','rebel','repel','excel','farewell','propel','shell','smell','spell','swell'],
+      'ight': ['bright','fight','light','might','night','right','sight','tight','bite','cite','kite','quite','white','write','delight','tonight','excite','invite','polite','despite','ignite','recite','reunite'],
+    };
+
+    function getSyllables(word) {
+      word = word.toLowerCase();
+      if (word.length <= 3) return 1;
+      word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+      word = word.replace(/^y/, '');
+      const m = word.match(/[aeiouy]{1,2}/g);
+      return m ? m.length : 1;
+    }
+
+    function getEnding(word) {
+      word = word.toLowerCase().replace(/[^a-z]/g, '');
+      if (word.length >= 4) return word.slice(-3);
+      if (word.length >= 3) return word.slice(-2);
+      return word;
+    }
+
+    function findRhymes() {
+      const input = document.getElementById('rhyme-input').value.trim().toLowerCase();
+      const resultsEl = document.getElementById('rhyme-results');
+      const totalEl = document.getElementById('total-rhymes');
+      const endingEl = document.getElementById('ending');
+      const syllableEl = document.getElementById('syllable-count');
+
+      if (!input) {
+        resultsEl.innerHTML = '<div class="rhyme-empty">Type a word above to find rhymes</div>';
+        totalEl.textContent = '0';
+        endingEl.textContent = '—';
+        syllableEl.textContent = '—';
+        document.getElementById('rhyme-count').textContent = '—';
+        return;
+      }
+
+      const syllables = getSyllables(input);
+      const ending = getEnding(input);
+
+      endingEl.textContent = '-' + ending;
+      syllableEl.textContent = syllables;
+
+      // Find perfect rhymes from DB
+      let perfect = [];
+      let near = [];
+
+      for (const [key, words] of Object.entries(rhymeDB)) {
+        const matched = words.filter(w => w !== input);
+        if (input.endsWith(key) || key === ending) {
+          perfect.push(...matched);
+        } else if (key.slice(-2) === ending.slice(-2) && key !== ending) {
+          near.push(...matched.slice(0, 5));
+        }
+      }
+
+      // Deduplicate
+      perfect = [...new Set(perfect)].filter(w => w !== input);
+      near = [...new Set(near)].filter(w => !perfect.includes(w) && w !== input);
+
+      // Also do simple ending match across all DB words
+      if (perfect.length === 0) {
+        const allWords = Object.values(rhymeDB).flat();
+        const simpleMatches = allWords.filter(w => {
+          if (w === input) return false;
+          const e = ending.length >= 3 ? ending.slice(-3) : ending.slice(-2);
+          return w.endsWith(e);
+        });
+        near.push(...simpleMatches);
+        near = [...new Set(near)].filter(w => w !== input);
+      }
+
+      const total = perfect.length + near.length;
+      totalEl.textContent = total;
+      document.getElementById('rhyme-count').textContent = total > 0 ? total + ' rhymes found' : 'No rhymes found';
+
+      if (total === 0) {
+        resultsEl.innerHTML = `<div class="rhyme-empty">No rhymes found for "<strong>${input}</strong>". Try a different word.</div>`;
+        return;
+      }
+
+      let html = '<div class="rhyme-groups">';
+
+      if (perfect.length > 0) {
+        html += `<div>
+          <div class="rhyme-group-label">Perfect Rhymes (${perfect.length})</div>
+          <div class="rhyme-tags">
+            ${perfect.map(w => `<span class="rhyme-tag perfect" onclick="searchWord('${w}')">${w}</span>`).join('')}
+          </div>
+        </div>`;
+      }
+
+      if (near.length > 0) {
+        html += `<div>
+          <div class="rhyme-group-label">Near Rhymes (${near.length})</div>
+          <div class="rhyme-tags">
+            ${near.slice(0, 30).map(w => `<span class="rhyme-tag" onclick="searchWord('${w}')">${w}</span>`).join('')}
+          </div>
+        </div>`;
+      }
+
+      html += '</div>';
+      resultsEl.innerHTML = html;
+    }
+
+    function searchWord(word) {
+      document.getElementById('rhyme-input').value = word;
+      findRhymes();
+    }
+
+    function clearAll() {
+      document.getElementById('rhyme-input').value = '';
+      findRhymes();
+      document.getElementById('rhyme-input').focus();
+    }
+  </script>
+
+</body>
+</html>

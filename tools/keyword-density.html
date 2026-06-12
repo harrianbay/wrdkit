@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keyword Density Checker — Free Online Tool | WrdKit</title>
+  <meta name="description" content="Free keyword density checker. Analyze keyword frequency and percentage in your text instantly. No signup required."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#">Tools ▾</a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section">Text Analysis</div>
+            <a href="word-counter.html">Word Counter</a>
+            <a href="character-counter.html">Character Counter</a>
+            <a href="sentence-counter.html">Sentence Counter</a>
+            <a href="paragraph-counter.html">Paragraph Counter</a>
+            <a href="reading-time.html">Reading Time</a>
+            <a href="keyword-density.html">Keyword Density</a>
+            <a href="most-used-words.html">Most Used Words</a>
+            <div class="dropdown-section">Text Conversion</div>
+            <a href="uppercase.html">Uppercase</a>
+            <a href="lowercase.html">Lowercase</a>
+            <a href="title-case.html">Title Case</a>
+            <a href="reverse-text.html">Reverse Text</a>
+            <a href="remove-spaces.html">Remove Extra Spaces</a>
+            <a href="remove-line-breaks.html">Remove Line Breaks</a>
+            <div class="dropdown-section">Writing Tools</div>
+            <a href="random-word.html">Random Word Generator</a>
+            <a href="lorem-ipsum.html">Lorem Ipsum Generator</a>
+            <a href="text-repeater.html">Text Repeater</a>
+            <div class="dropdown-section">Social Media</div>
+            <a href="twitter-counter.html">Twitter Counter</a>
+            <a href="instagram-counter.html">Instagram Counter</a>
+            <a href="tiktok-counter.html">TikTok Bio Counter</a>
+          </div>
+        </li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+      <a href="word-counter.html" class="nav-btn">Try Free →</a>
+    </div>
+  </nav>
+
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="tool-hero-icon icon-pink">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+      <div>
+        <h1>Keyword Density Checker</h1>
+        <p>Analyze keyword frequency and percentage in your text instantly.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-shell-wrap">
+    <div class="tool-shell">
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Editor</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" onclick="copyText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy
+          </button>
+          <button class="toolbar-btn" onclick="clearText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <textarea id="input" placeholder="Paste your content here to analyze keyword density..."></textarea>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <span class="stat-card-number" id="words">0</span>
+          <span class="stat-card-label">Total Words</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="unique">0</span>
+          <span class="stat-card-label">Unique Words</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="top-count">0</span>
+          <span class="stat-card-label">Top Word Count</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="top-density">0</span>
+          <span class="stat-card-label">Top Density %</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="sentences">0</span>
+          <span class="stat-card-label">Sentences</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="paragraphs">0</span>
+          <span class="stat-card-label">Paragraphs</span>
+        </div>
+      </div>
+
+      <div id="keyword-table-wrap" style="padding: 20px; border-top: 1px solid var(--border); display:none;">
+        <table id="keyword-table" style="width:100%; border-collapse:collapse; font-size:14px;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <th style="text-align:left; padding:8px 12px; color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Keyword</th>
+              <th style="text-align:center; padding:8px 12px; color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Count</th>
+              <th style="text-align:center; padding:8px 12px; color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Density</th>
+              <th style="text-align:left; padding:8px 12px; color:var(--muted); font-weight:600; font-size:12px; text-transform:uppercase; letter-spacing:0.5px;">Bar</th>
+            </tr>
+          </thead>
+          <tbody id="keyword-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-content-wrap">
+    <div class="tool-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>What is keyword density?</h3>
+        <p>Keyword density is the percentage of times a keyword appears in your text compared to the total word count. A density of 1-2% is generally considered optimal for SEO without over-optimization.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is a good keyword density for SEO?</h3>
+        <p>Most SEO experts recommend keeping keyword density between 1% and 2%. Going above 3% can trigger keyword stuffing penalties from search engines like Google.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does keyword density still matter for SEO?</h3>
+        <p>It matters less than it used to but it's still a signal. Modern SEO focuses more on semantic relevance and topic coverage. However avoiding overuse of any single keyword remains important.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my text stored anywhere?</h3>
+        <p>No. All analysis runs locally in your browser. Your text never leaves your device.</p>
+      </div>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related Tools</h2>
+      <div class="related-grid">
+        <a href="word-counter.html" class="related-card">
+          <div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div><h4>Word Counter</h4><p>Count words instantly</p></div>
+        </a>
+        <a href="most-used-words.html" class="related-card">
+          <div class="tool-icon icon-yellow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <div><h4>Most Used Words</h4><p>Find repeated words</p></div>
+        </a>
+        <a href="reading-time.html" class="related-card">
+          <div class="tool-icon icon-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><h4>Reading Time</h4><p>Estimate read time</p></div>
+        </a>
+        <a href="sentence-counter.html" class="related-card">
+          <div class="tool-icon icon-green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/></svg></div>
+          <div><h4>Sentence Counter</h4><p>Count sentences fast</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../terms.html">Terms</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('input');
+    const stopWords = new Set(['the','a','an','and','or','but','in','on','at','to','for','of','with','by','from','is','are','was','were','be','been','being','have','has','had','do','does','did','will','would','could','should','may','might','that','this','these','those','it','its','i','you','he','she','we','they','my','your','his','her','our','their','as','if','so','not','no','up','out','about','into','than','then','when','where','who','which','what','how','all','each','every','both','few','more','most','other','some','such','only','own','same','just','because','while','after','before','between','through','during','without','within','along','following','across','behind','beyond','plus','except','but','up','down','off','over','under','again','further','once']);
+
+    function animateNumber(el, newVal) {
+      const current = parseInt(el.textContent) || 0;
+      if (current === newVal) return;
+      const diff = newVal - current;
+      const steps = 12;
+      const step = diff / steps;
+      let count = 0;
+      const timer = setInterval(() => {
+        count++;
+        el.textContent = Math.round(current + step * count);
+        if (count >= steps) { el.textContent = newVal; clearInterval(timer); }
+      }, 16);
+    }
+
+    function update() {
+      const text = input.value;
+      const words = text.trim() === '' ? [] : text.trim().toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/).filter(w => w.length > 1);
+      const totalWords = words.length;
+      const uniqueWords = new Set(words).size;
+      const sentences = text.trim() === '' ? 0 : (text.match(/[^.!?]*[.!?]+/g) || []).length;
+      const paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(p => p.trim()).length || (text.trim() ? 1 : 0);
+
+      const freq = {};
+      words.forEach(w => { if (!stopWords.has(w)) freq[w] = (freq[w] || 0) + 1; });
+      const sorted = Object.entries(freq).sort((a,b) => b[1]-a[1]).slice(0,15);
+      const topCount = sorted[0] ? sorted[0][1] : 0;
+      const topDensity = totalWords > 0 && sorted[0] ? ((sorted[0][1]/totalWords)*100).toFixed(1) : 0;
+
+      animateNumber(document.getElementById('words'), totalWords);
+      animateNumber(document.getElementById('unique'), uniqueWords);
+      animateNumber(document.getElementById('top-count'), topCount);
+      document.getElementById('top-density').textContent = topDensity;
+      animateNumber(document.getElementById('sentences'), sentences);
+      animateNumber(document.getElementById('paragraphs'), paragraphs);
+
+      const tableWrap = document.getElementById('keyword-table-wrap');
+      const tbody = document.getElementById('keyword-rows');
+      if (sorted.length > 0) {
+        tableWrap.style.display = 'block';
+        tbody.innerHTML = sorted.map(([word, count]) => {
+          const density = ((count/totalWords)*100).toFixed(1);
+          const barWidth = Math.round((count/topCount)*100);
+          return `<tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 12px; font-weight:500;">${word}</td>
+            <td style="padding:10px 12px; text-align:center;">${count}</td>
+            <td style="padding:10px 12px; text-align:center; color:var(--accent); font-weight:600;">${density}%</td>
+            <td style="padding:10px 12px;">
+              <div style="height:6px; background:var(--border); border-radius:3px; overflow:hidden;">
+                <div style="height:100%; width:${barWidth}%; background:var(--accent); border-radius:3px;"></div>
+              </div>
+            </td>
+          </tr>`;
+        }).join('');
+      } else {
+        tableWrap.style.display = 'none';
+      }
+    }
+
+    input.addEventListener('input', update);
+    function copyText() { navigator.clipboard.writeText(input.value); }
+    function clearText() {
+      input.value = '';
+      ['words','unique','top-count','sentences','paragraphs'].forEach(id => document.getElementById(id).textContent = '0');
+      document.getElementById('top-density').textContent = '0';
+      document.getElementById('keyword-table-wrap').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

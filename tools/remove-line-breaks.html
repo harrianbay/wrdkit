@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Remove Line Breaks — Clean Up Text Free | WrdKit</title>
+  <meta name="description" content="Free online tool to remove line breaks from text instantly. Clean up unwanted line breaks and carriage returns. No signup required."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#">Tools ▾</a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section">Text Analysis</div>
+            <a href="word-counter.html">Word Counter</a>
+            <a href="character-counter.html">Character Counter</a>
+            <a href="sentence-counter.html">Sentence Counter</a>
+            <a href="paragraph-counter.html">Paragraph Counter</a>
+            <a href="reading-time.html">Reading Time</a>
+            <a href="keyword-density.html">Keyword Density</a>
+            <a href="most-used-words.html">Most Used Words</a>
+            <div class="dropdown-section">Text Conversion</div>
+            <a href="uppercase.html">Uppercase</a>
+            <a href="lowercase.html">Lowercase</a>
+            <a href="title-case.html">Title Case</a>
+            <a href="reverse-text.html">Reverse Text</a>
+            <a href="remove-spaces.html">Remove Extra Spaces</a>
+            <a href="remove-line-breaks.html">Remove Line Breaks</a>
+            <div class="dropdown-section">Writing Tools</div>
+            <a href="random-word.html">Random Word Generator</a>
+            <a href="lorem-ipsum.html">Lorem Ipsum Generator</a>
+            <a href="text-repeater.html">Text Repeater</a>
+            <div class="dropdown-section">Social Media</div>
+            <a href="twitter-counter.html">Twitter Counter</a>
+            <a href="instagram-counter.html">Instagram Counter</a>
+            <a href="tiktok-counter.html">TikTok Bio Counter</a>
+          </div>
+        </li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+      <a href="word-counter.html" class="nav-btn">Try Free →</a>
+    </div>
+  </nav>
+
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="tool-hero-icon icon-blue">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </div>
+      <div>
+        <h1>Remove Line Breaks</h1>
+        <p>Remove unwanted line breaks and carriage returns from your text instantly.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-shell-wrap">
+    <div class="tool-shell">
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Input</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" id="mode-btn" onclick="toggleMode()">Mode: All Breaks</button>
+          <button class="toolbar-btn" onclick="clearText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+      <textarea id="input" placeholder="Paste your text with unwanted line breaks here..."></textarea>
+      <div class="stat-cards">
+        <div class="stat-card">
+          <span class="stat-card-number" id="breaks-removed">0</span>
+          <span class="stat-card-label">Breaks Removed</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="words">0</span>
+          <span class="stat-card-label">Words</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="chars-before">0</span>
+          <span class="stat-card-label">Chars Before</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="chars-after">0</span>
+          <span class="stat-card-label">Chars After</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-shell-wrap" style="margin-top:16px;">
+    <div class="tool-shell">
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Output — Cleaned</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" onclick="copyOutput()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy
+          </button>
+        </div>
+      </div>
+      <div id="output" style="padding:24px; min-height:120px; font-size:15px; line-height:1.8; white-space:pre-wrap; word-break:break-word; color:var(--text); font-family:'Inter',sans-serif;"></div>
+    </div>
+  </div>
+
+  <div class="tool-content-wrap">
+    <div class="tool-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>What are the two modes?</h3>
+        <p>All Breaks mode removes every single line break, joining everything into one continuous block of text. Paragraph mode removes single line breaks but keeps double line breaks so your paragraphs stay intact.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Where do unwanted line breaks come from?</h3>
+        <p>They commonly appear when copying text from PDFs, emails, Word documents, or e-books. Each line in the original document gets its own line break, which breaks the flow when pasted elsewhere.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will it remove spaces too?</h3>
+        <p>No. This tool only targets line breaks. Use the Remove Extra Spaces tool if you also need to clean up spacing.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my text stored anywhere?</h3>
+        <p>No. Everything runs locally in your browser. Your text never leaves your device.</p>
+      </div>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related Tools</h2>
+      <div class="related-grid">
+        <a href="remove-spaces.html" class="related-card">
+          <div class="tool-icon icon-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg></div>
+          <div><h4>Remove Spaces</h4><p>Clean up extra spaces</p></div>
+        </a>
+        <a href="word-counter.html" class="related-card">
+          <div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div><h4>Word Counter</h4><p>Count words instantly</p></div>
+        </a>
+        <a href="uppercase.html" class="related-card">
+          <div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div>
+          <div><h4>Uppercase</h4><p>Convert to uppercase</p></div>
+        </a>
+        <a href="reverse-text.html" class="related-card">
+          <div class="tool-icon icon-purple"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+          <div><h4>Reverse Text</h4><p>Flip text backwards</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../terms.html">Terms</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+    let mode = 'all';
+
+    function toggleMode() {
+      mode = mode === 'all' ? 'paragraphs' : 'all';
+      document.getElementById('mode-btn').textContent = 'Mode: ' + (mode === 'all' ? 'All Breaks' : 'Keep Paragraphs');
+      update();
+    }
+
+    function update() {
+      const text = input.value;
+      let cleaned;
+      if (mode === 'all') {
+        cleaned = text.replace(/[\r\n]+/g, ' ').replace(/  +/g, ' ').trim();
+      } else {
+        cleaned = text.replace(/([^\n])\n([^\n])/g, '$1 $2').replace(/\n{3,}/g, '\n\n').trim();
+      }
+      output.textContent = cleaned;
+      const breaksRemoved = (text.match(/[\r\n]/g) || []).length - (cleaned.match(/[\r\n]/g) || []).length;
+      const words = cleaned.trim() === '' ? 0 : cleaned.trim().split(/\s+/).length;
+      document.getElementById('breaks-removed').textContent = Math.max(0, breaksRemoved);
+      document.getElementById('words').textContent = words;
+      document.getElementById('chars-before').textContent = text.length;
+      document.getElementById('chars-after').textContent = cleaned.length;
+    }
+
+    input.addEventListener('input', update);
+    function copyOutput() { navigator.clipboard.writeText(output.textContent); }
+    function clearText() {
+      input.value = ''; output.textContent = '';
+      ['breaks-removed','words','chars-before','chars-after'].forEach(id => document.getElementById(id).textContent = '0');
+    }
+  </script>
+</body>
+</html>

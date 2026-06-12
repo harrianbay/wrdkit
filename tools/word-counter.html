@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Word Counter — Count Words Online Free | WrdKit</title>
+  <meta name="description" content="Free online word counter. Count words, characters, sentences, paragraphs and reading time instantly as you type. No signup required."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#">Tools ▾</a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section">Text Analysis</div>
+            <a href="word-counter.html">Word Counter</a>
+            <a href="character-counter.html">Character Counter</a>
+            <a href="sentence-counter.html">Sentence Counter</a>
+            <a href="paragraph-counter.html">Paragraph Counter</a>
+            <a href="reading-time.html">Reading Time</a>
+            <a href="keyword-density.html">Keyword Density</a>
+            <a href="most-used-words.html">Most Used Words</a>
+            <div class="dropdown-section">Text Conversion</div>
+            <a href="uppercase.html">Uppercase</a>
+            <a href="lowercase.html">Lowercase</a>
+            <a href="title-case.html">Title Case</a>
+            <a href="reverse-text.html">Reverse Text</a>
+            <a href="remove-spaces.html">Remove Extra Spaces</a>
+            <a href="remove-line-breaks.html">Remove Line Breaks</a>
+            <div class="dropdown-section">Writing Tools</div>
+            <a href="random-word.html">Random Word Generator</a>
+            <a href="lorem-ipsum.html">Lorem Ipsum Generator</a>
+            <a href="text-repeater.html">Text Repeater</a>
+            <div class="dropdown-section">Social Media</div>
+            <a href="twitter-counter.html">Twitter Counter</a>
+            <a href="instagram-counter.html">Instagram Counter</a>
+            <a href="tiktok-counter.html">TikTok Bio Counter</a>
+          </div>
+        </li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+      <a href="word-counter.html" class="nav-btn">Try Free →</a>
+    </div>
+  </nav>
+
+  <!-- TOOL HERO -->
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="tool-hero-icon icon-blue">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      </div>
+      <div>
+        <h1>Word Counter</h1>
+        <p>Analyze words, characters, reading time and more in real time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOOL SHELL -->
+  <div class="tool-shell-wrap">
+    <div class="tool-shell">
+
+      <!-- TOOLBAR -->
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Editor</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" onclick="copyText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy
+          </button>
+          <button class="toolbar-btn" onclick="clearText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- TEXTAREA -->
+      <textarea id="input" placeholder="Start typing or paste your text here..."></textarea>
+
+      <!-- STATS CARDS -->
+      <div class="stat-cards">
+        <div class="stat-card">
+          <span class="stat-card-number" id="words">0</span>
+          <span class="stat-card-label">Words</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="chars">0</span>
+          <span class="stat-card-label">Characters</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="chars-no-space">0</span>
+          <span class="stat-card-label">No Spaces</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="sentences">0</span>
+          <span class="stat-card-label">Sentences</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="paragraphs">0</span>
+          <span class="stat-card-label">Paragraphs</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="read-time">0</span>
+          <span class="stat-card-label">Min Read</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- LIVE INSIGHTS -->
+<div class="insights-wrap">
+  <div class="insights-header">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    Live Insights
+  </div>
+  <div class="insights-grid">
+    <div class="insight-card">
+      <span class="insight-value" id="reading-level">—</span>
+      <span class="insight-label">Reading Level</span>
+    </div>
+    <div class="insight-card">
+      <span class="insight-value" id="avg-word-length">—</span>
+      <span class="insight-label">Avg Word Length</span>
+    </div>
+    <div class="insight-card">
+      <span class="insight-value" id="speaking-time">—</span>
+      <span class="insight-label">Speaking Time</span>
+    </div>
+    <div class="insight-card">
+      <span class="insight-value" id="top-keyword">—</span>
+      <span class="insight-label">Top Keyword</span>
+    </div>
+  </div>
+</div>
+
+  <!-- FAQ -->
+  <div class="tool-content-wrap">
+
+    <div class="tool-faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>How does the word counter work?</h3>
+        <p>Our word counter splits your text by whitespace and counts each word in real time as you type. No button clicks needed — results update instantly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a word limit?</h3>
+        <p>No. You can paste as much text as you want — entire essays, articles, or books. The counter handles any length instantly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it count characters with or without spaces?</h3>
+        <p>Both. We show character count with spaces and without spaces separately so you always have the right number for your platform.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my text saved or stored?</h3>
+        <p>No. Everything runs locally in your browser. Your text never leaves your device and is never sent to any server.</p>
+      </div>
+    </div>
+
+    <!-- RELATED TOOLS -->
+    <div class="related-tools">
+      <h2>Related Tools</h2>
+      <div class="related-grid">
+        <a href="character-counter.html" class="related-card">
+          <div class="tool-icon icon-purple"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div>
+          <div>
+            <h4>Character Counter</h4>
+            <p>Count characters instantly</p>
+          </div>
+        </a>
+        <a href="reading-time.html" class="related-card">
+          <div class="tool-icon icon-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div>
+            <h4>Reading Time</h4>
+            <p>Estimate read time instantly</p>
+          </div>
+        </a>
+        <a href="keyword-density.html" class="related-card">
+          <div class="tool-icon icon-pink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div>
+            <h4>Keyword Density</h4>
+            <p>Check keyword frequency</p>
+          </div>
+        </a>
+        <a href="sentence-counter.html" class="related-card">
+          <div class="tool-icon icon-green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/><line x1="21" y1="18" x2="11" y2="18"/></svg></div>
+          <div>
+            <h4>Sentence Counter</h4>
+            <p>Count sentences in your text</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../terms.html">Terms</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('input');
+
+    function animateNumber(el, newVal) {
+      const current = parseInt(el.textContent) || 0;
+      if (current === newVal) return;
+      const diff = newVal - current;
+      const steps = 12;
+      const step = diff / steps;
+      let count = 0;
+      const timer = setInterval(() => {
+        count++;
+        el.textContent = Math.round(current + step * count);
+        if (count >= steps) { el.textContent = newVal; clearInterval(timer); }
+      }, 16);
+    }
+
+    function update() {
+      const text = input.value;
+      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+      const chars = text.length;
+      const charsNoSpace = text.replace(/\s/g, '').length;
+      const sentences = text.trim() === '' ? 0 : (text.match(/[^.!?]*[.!?]+/g) || []).length;
+      const paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(p => p.trim()).length || 1;
+      const readTime = Math.max(1, Math.ceil(words / 200));
+
+      animateNumber(document.getElementById('words'), words);
+      animateNumber(document.getElementById('chars'), chars);
+      animateNumber(document.getElementById('chars-no-space'), charsNoSpace);
+      animateNumber(document.getElementById('sentences'), sentences);
+      animateNumber(document.getElementById('paragraphs'), paragraphs);
+      animateNumber(document.getElementById('read-time'), readTime);
+            // Live Insights
+if (words === 0) {
+  document.getElementById('reading-level').textContent = '—';
+  document.getElementById('avg-word-length').textContent = '—';
+  document.getElementById('speaking-time').textContent = '—';
+  document.getElementById('top-keyword').textContent = '—';
+} else {
+  // Reading level
+  const avgSyllables = text.split(/\s+/).filter(w => w).reduce((acc, w) => acc + Math.max(1, w.replace(/[^aeiou]/gi,'').length), 0) / words;
+  const fk = 206.835 - 1.015 * (words / Math.max(1, sentences)) - 84.6 * avgSyllables;
+  const level = fk > 70 ? 'Easy' : fk > 50 ? 'Medium' : 'Advanced';
+  document.getElementById('reading-level').textContent = level;
+
+  // Avg word length
+  const avgLen = (text.replace(/\s/g,'').length / words).toFixed(1);
+  document.getElementById('avg-word-length').textContent = avgLen + ' chars';
+
+  // Speaking time
+  const speakMins = Math.ceil(words / 130);
+  document.getElementById('speaking-time').textContent = speakMins + ' min';
+
+  // Top keyword
+  const stopWords = new Set(['the','a','an','and','or','but','in','on','at','to','for','of','with','is','was','are','were','it','this','that','be','as','by','from','have','has','had','not','so','if','about','all','also','do','did','can','will','just','get','got','been','their','there','they','its','into','more','would','could','should','than','then','when','which','who','what','how','your','our','my','his','her','we','you','he','she','i','up','out','no','one','said','each','use']);
+  const wordFreq = {};
+  text.toLowerCase().match(/\b[a-z]{3,}\b/g)?.forEach(w => {
+    if (!stopWords.has(w)) wordFreq[w] = (wordFreq[w] || 0) + 1;
+  });
+  const topWord = Object.entries(wordFreq).sort((a,b) => b[1]-a[1])[0];
+  document.getElementById('top-keyword').textContent = topWord ? topWord[0] : '—';
+}
+    }
+
+    input.addEventListener('input', update);
+
+    function copyText() {
+      navigator.clipboard.writeText(input.value);
+    }
+
+    function clearText() {
+      input.value = '';
+      ['words','chars','chars-no-space','sentences','paragraphs','read-time'].forEach(id => {
+        document.getElementById(id).textContent = '0';
+      });
+    }
+  </script>
+
+</body>
+</html>

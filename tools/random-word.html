@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Random Word Generator — Free Online Tool | WrdKit</title>
+<meta name="description" content="Free online random word generator. Generate random nouns, verbs, adjectives, or mixed words instantly. No signup required."/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a><ul class="nav-links"><li class="nav-dropdown"><a href="#">Tools ▾</a><div class="nav-dropdown-menu"><div class="dropdown-section">Text Analysis</div><a href="word-counter.html">Word Counter</a><a href="character-counter.html">Character Counter</a><a href="sentence-counter.html">Sentence Counter</a><a href="paragraph-counter.html">Paragraph Counter</a><a href="reading-time.html">Reading Time</a><a href="keyword-density.html">Keyword Density</a><a href="most-used-words.html">Most Used Words</a><div class="dropdown-section">Text Conversion</div><a href="uppercase.html">Uppercase</a><a href="lowercase.html">Lowercase</a><a href="title-case.html">Title Case</a><a href="reverse-text.html">Reverse Text</a><a href="remove-spaces.html">Remove Extra Spaces</a><a href="remove-line-breaks.html">Remove Line Breaks</a><div class="dropdown-section">Writing Tools</div><a href="random-word.html">Random Word Generator</a><a href="lorem-ipsum.html">Lorem Ipsum Generator</a><a href="text-repeater.html">Text Repeater</a><div class="dropdown-section">Social Media</div><a href="twitter-counter.html">Twitter Counter</a><a href="instagram-counter.html">Instagram Counter</a><a href="tiktok-counter.html">TikTok Bio Counter</a></div></li><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li></ul><a href="word-counter.html" class="nav-btn">Try Free →</a></div></nav>
+
+<div class="tool-hero"><div class="tool-hero-inner"><div class="tool-hero-icon icon-blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="16" y="2" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg></div><div><h1>Random Word Generator</h1><p>Generate random words for writing prompts, brainstorming, games, and creativity.</p></div></div></div>
+
+<div class="tool-shell-wrap"><div class="tool-shell">
+<div class="tool-toolbar"><span class="tool-toolbar-title">Settings</span><div class="tool-toolbar-actions"><button class="toolbar-btn" onclick="generate()" style="background:var(--accent);color:white;border-color:var(--accent);"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>Generate</button></div></div>
+
+<div style="padding:24px;display:flex;gap:24px;flex-wrap:wrap;align-items:flex-end;">
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <label style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">How Many</label>
+    <div style="display:flex;align-items:center;gap:10px;">
+      <button onclick="changeCount(-1)" style="width:32px;height:32px;border:1px solid var(--border);border-radius:8px;background:white;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">−</button>
+      <span id="count-display" style="font-family:'Syne',sans-serif;font-size:24px;font-weight:800;min-width:32px;text-align:center;">10</span>
+      <button onclick="changeCount(1)" style="width:32px;height:32px;border:1px solid var(--border);border-radius:8px;background:white;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color 0.2s;" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">+</button>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <label style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Word Type</label>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;">
+      <button class="type-btn active" onclick="setType('all', this)">All</button>
+      <button class="type-btn" onclick="setType('nouns', this)">Nouns</button>
+      <button class="type-btn" onclick="setType('verbs', this)">Verbs</button>
+      <button class="type-btn" onclick="setType('adjectives', this)">Adjectives</button>
+      <button class="type-btn" onclick="setType('adverbs', this)">Adverbs</button>
+    </div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:6px;">
+    <label style="font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Display As</label>
+    <div style="display:flex;gap:8px;">
+      <button class="type-btn active" id="display-chips" onclick="setDisplay('chips', this)">Chips</button>
+      <button class="type-btn" id="display-list" onclick="setDisplay('list', this)">List</button>
+      <button class="type-btn" id="display-comma" onclick="setDisplay('comma', this)">Comma</button>
+    </div>
+  </div>
+</div>
+
+<div class="stat-cards">
+  <div class="stat-card"><span class="stat-card-number" id="stat-count">0</span><span class="stat-card-label">Generated</span></div>
+  <div class="stat-card"><span class="stat-card-number" id="stat-type">All</span><span class="stat-card-label">Type</span></div>
+  <div class="stat-card"><span class="stat-card-number" id="stat-history">0</span><span class="stat-card-label">Total Generated</span></div>
+</div>
+</div></div>
+
+<div class="tool-shell-wrap" style="margin-top:16px;"><div class="tool-shell">
+<div class="tool-toolbar"><span class="tool-toolbar-title">Generated Words</span><div class="tool-toolbar-actions"><button class="toolbar-btn" onclick="copyAll()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy All</button><button class="toolbar-btn" onclick="clearWords()">Clear</button></div></div>
+<div id="output" style="padding:24px;min-height:160px;"></div>
+</div></div>
+
+<div class="tool-content-wrap">
+<div class="tool-faq"><h2>Frequently Asked Questions</h2>
+<div class="faq-item"><h3>What can I use random words for?</h3><p>Random word generators are used for writing prompts, creative brainstorming, naming projects, playing word games like Taboo or Pictionary, and breaking through writer's block by introducing unexpected concepts.</p></div>
+<div class="faq-item"><h3>What is the difference between word types?</h3><p>Nouns are people, places, or things. Verbs are actions or states. Adjectives describe nouns. Adverbs modify verbs or adjectives. Mixing types gives you more creative combinations for storytelling.</p></div>
+<div class="faq-item"><h3>Can I click a word to remove it?</h3><p>Yes — click any generated word chip to remove it from the list. This lets you curate the results down to only the words you want to keep.</p></div>
+<div class="faq-item"><h3>Is the word list stored anywhere?</h3><p>No. Everything runs locally in your browser. No data is ever sent to any server.</p></div>
+</div>
+<div class="related-tools"><h2>Related Tools</h2><div class="related-grid">
+<a href="lorem-ipsum.html" class="related-card"><div class="tool-icon icon-green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div><h4>Lorem Ipsum</h4><p>Generate placeholder text</p></div></a>
+<a href="text-repeater.html" class="related-card"><div class="tool-icon icon-orange"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><div><h4>Text Repeater</h4><p>Repeat any text</p></div></a>
+<a href="word-counter.html" class="related-card"><div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><h4>Word Counter</h4><p>Count words instantly</p></div></a>
+<a href="most-used-words.html" class="related-card"><div class="tool-icon icon-yellow"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div><h4>Most Used Words</h4><p>Find repeated words</p></div></a>
+</div></div>
+</div>
+
+<footer><a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a><ul class="footer-links"><li><a href="../about.html">About</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../blog.html">Blog</a></li></ul><p class="footer-copy">© 2026 WrdKit. All rights reserved.</p></footer>
+
+<style>
+.type-btn {
+  padding: 7px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  transition: all 0.2s;
+}
+.type-btn:hover { border-color: var(--accent); color: var(--accent); }
+.type-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+
+.word-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  animation: chipIn 0.3s ease forwards;
+}
+.word-chip:hover { border-color: #ef4444; color: #ef4444; background: #fef2f2; }
+.word-chip .chip-type { font-size: 10px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+@keyframes chipIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+</style>
+
+<script>
+const wordBank = {
+  nouns: ['mountain','river','forest','castle','shadow','flame','mirror','compass','lantern','anchor','bridge','thunder','garden','lighthouse','canyon','glacier','harbor','meadow','summit','voyage','atlas','ember','riddle','pilgrim','labyrinth','horizon','solitude','twilight','echo','phantom','chronicle','prism','nomad','relic','tempest','blossom','cavern','beacon','current','abyss','myth','epoch','fragment','vessel','doctrine','sentinel','frontier','ruin','covenant','silhouette'],
+  verbs: ['wander','illuminate','shatter','forge','descend','unravel','ignite','carve','drift','harvest','sculpt','uncover','traverse','anchor','cascade','fracture','weave','endure','kindle','dissolve','pursue','reclaim','vanish','awaken','transform','resonate','surrender','amplify','navigate','transcend','erode','construct','illuminate','conquer','recede','flourish','collide','emerge','restore','diverge','converge','persist','eclipse','liberate','chronicle','abandon','shelter','evolve','unfold','diverge'],
+  adjectives: ['ancient','fierce','hollow','radiant','cryptic','desolate','vivid','fragile','boundless','turbulent','serene','distant','luminous','rugged','elusive','vibrant','somber','pristine','towering','fleeting','vast','stark','fluid','jagged','silent','golden','fractured','weathered','sublime','ethereal','relentless','tranquil','obscure','resilient','barren','majestic','faint','dense','volatile','immense','graceful','raw','timeless','shifting','infinite','delicate','haunting','bold','crisp','profound'],
+  adverbs: ['swiftly','silently','endlessly','fiercely','gently','suddenly','deeply','barely','relentlessly','quietly','boldly','slowly','vividly','harshly','carefully','effortlessly','intensely','faintly','steadily','wildly','gracefully','precisely','urgently','softly','desperately','firmly','restlessly','gradually','sharply','calmly','powerfully','endlessly','briefly','tirelessly','honestly','fearlessly','tenderly','rapidly','solemnly','brightly']
+};
+
+let currentType = 'all';
+let currentDisplay = 'chips';
+let count = 10;
+let totalGenerated = 0;
+let currentWords = [];
+
+function changeCount(delta) {
+  count = Math.max(1, Math.min(50, count + delta));
+  document.getElementById('count-display').textContent = count;
+}
+
+function setType(type, btn) {
+  currentType = type;
+  document.querySelectorAll('.type-btn').forEach(b => {
+    if (['All','Nouns','Verbs','Adjectives','Adverbs'].includes(b.textContent)) b.classList.remove('active');
+  });
+  btn.classList.add('active');
+  document.getElementById('stat-type').textContent = btn.textContent;
+}
+
+function setDisplay(display, btn) {
+  currentDisplay = display;
+  ['chips','list','comma'].forEach(d => {
+    const b = document.getElementById('display-' + d);
+    if (b) b.classList.remove('active');
+  });
+  btn.classList.add('active');
+  renderWords();
+}
+
+function getPool() {
+  if (currentType === 'all') return [...wordBank.nouns, ...wordBank.verbs, ...wordBank.adjectives, ...wordBank.adverbs];
+  return wordBank[currentType] || wordBank.nouns;
+}
+
+function getTypeLabel(word) {
+  if (wordBank.nouns.includes(word)) return 'noun';
+  if (wordBank.verbs.includes(word)) return 'verb';
+  if (wordBank.adjectives.includes(word)) return 'adj';
+  if (wordBank.adverbs.includes(word)) return 'adv';
+  return '';
+}
+
+function generate() {
+  const pool = getPool();
+  const shuffled = [...pool].sort(() => Math.random() - 0.5);
+  currentWords = shuffled.slice(0, Math.min(count, pool.length));
+  totalGenerated += currentWords.length;
+  document.getElementById('stat-count').textContent = currentWords.length;
+  document.getElementById('stat-history').textContent = totalGenerated;
+  renderWords();
+}
+
+function renderWords() {
+  const out = document.getElementById('output');
+  if (currentWords.length === 0) { out.innerHTML = '<p style="color:var(--muted);font-size:14px;">Hit Generate to get words.</p>'; return; }
+
+  if (currentDisplay === 'chips') {
+    out.style.display = 'flex';
+    out.style.flexWrap = 'wrap';
+    out.style.gap = '10px';
+    out.innerHTML = currentWords.map((w, i) => `
+      <div class="word-chip" onclick="removeWord(${i})" title="Click to remove" style="animation-delay:${i * 30}ms">
+        ${w}
+        ${currentType === 'all' ? `<span class="chip-type">${getTypeLabel(w)}</span>` : ''}
+      </div>
+    `).join('');
+  } else if (currentDisplay === 'list') {
+    out.style.display = 'block';
+    out.innerHTML = `<ol style="padding-left:20px;line-height:2.2;font-size:15px;">${currentWords.map(w => `<li style="color:var(--text);">${w}</li>`).join('')}</ol>`;
+  } else {
+    out.style.display = 'block';
+    out.innerHTML = `<p style="font-size:15px;line-height:1.8;color:var(--text);">${currentWords.join(', ')}</p>`;
+  }
+}
+
+function removeWord(index) {
+  currentWords.splice(index, 1);
+  document.getElementById('stat-count').textContent = currentWords.length;
+  renderWords();
+}
+
+function copyAll() { navigator.clipboard.writeText(currentWords.join(', ')); }
+function clearWords() { currentWords = []; document.getElementById('stat-count').textContent = 0; document.getElementById('output').innerHTML = ''; }
+
+generate();
+</script>
+</body>
+</html>

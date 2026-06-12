@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Readability Scores Explained: Flesch-Kincaid, Gunning Fog & What to Target | WrdKit</title>
+  <meta name="description" content="Readability scores explained: Flesch-Kincaid Reading Ease, Flesch-Kincaid Grade Level, Gunning Fog Index, SMOG. What scores to target for your audience and how to improve them free."/>
+  <meta name="keywords" content="readability score guide, Flesch Kincaid explained, Gunning Fog Index, how to improve readability, readability checker free, SMOG index, readability SEO"/>
+  <meta property="og:title" content="Readability Scores Explained: Flesch-Kincaid, Gunning Fog & What to Target | WrdKit"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:url" content="https://wrdkit.com/blog/readability-score-guide.html"/>
+  <link rel="canonical" href="https://wrdkit.com/blog/readability-score-guide.html"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+@font-face{font-family:'Syne';src:url('../fonts/Syne-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Syne';src:url('../fonts/Syne-ExtraBold.ttf') format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Inter';src:url('../fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Inter';src:url('../fonts/Inter-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Inter';src:url('../fonts/Inter-SemiBold.woff2') format('woff2');font-weight:600;font-display:swap}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F8F9FF;color:#1a1a2e;-webkit-font-smoothing:antialiased}
+.article-wrap{max-width:740px;margin:0 auto;padding:40px 24px 100px}
+.back-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--accent,#2F3CEF);text-decoration:none;margin-bottom:32px;opacity:.8}
+.back-link:hover{opacity:1}
+.art-tag{display:inline-flex;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 12px;border-radius:999px;background:#EEF2FF;color:var(--accent,#2F3CEF);margin-bottom:18px}
+.art-title{font-family:'Inter',sans-serif;font-size:42px;font-weight:700;letter-spacing:-2px;line-height:1.1;margin-bottom:18px;color:#0f0f1a}
+.art-meta{display:flex;gap:16px;font-size:13px;color:#6b7280;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid rgba(0,0,0,.07)}
+.art-intro{font-size:18px;color:#374151;line-height:1.75;margin-bottom:36px}
+.art-body h2{font-family:'Inter',sans-serif;font-size:26px;font-weight:700;letter-spacing:-1px;margin:40px 0 14px;color:#0f0f1a}
+.art-body h3{font-family:'Inter',sans-serif;font-size:19px;font-weight:600;letter-spacing:-.5px;margin:28px 0 10px;color:#1a1a2e}
+.art-body p{font-size:16px;line-height:1.8;color:#374151;margin-bottom:18px}
+.art-body ul,.art-body ol{padding-left:22px;margin-bottom:18px}
+.art-body li{font-size:16px;line-height:1.8;color:#374151;margin-bottom:6px}
+.art-body strong{color:#1a1a2e;font-weight:600}
+.data-table{width:100%;border-collapse:collapse;margin:24px 0 32px;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.data-table th{background:#EEF2FF;color:var(--accent,#2F3CEF);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:12px 16px;text-align:left}
+.data-table td{padding:13px 16px;font-size:15px;border-bottom:1px solid rgba(0,0,0,.05);background:rgba(255,255,255,.9);color:#374151}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:#F5F7FF}
+.callout{background:linear-gradient(135deg,#EEF2FF,#E0E7FF);border-left:4px solid var(--accent,#2F3CEF);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0;font-size:15px;line-height:1.7;color:#374151}
+.callout strong{color:var(--accent,#2F3CEF)}
+.cta-box{background:linear-gradient(135deg,rgba(47,60,239,.07),rgba(255,255,255,.9));border:1px solid rgba(47,60,239,.12);border-radius:20px;padding:36px;text-align:center;margin:48px 0 0}
+.cta-box h3{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;letter-spacing:-.5px;margin-bottom:10px}
+.cta-box p{font-size:15px;color:#6b7280;margin-bottom:20px}
+.cta-btn{display:inline-block;background:var(--accent,#2F3CEF);color:white;padding:13px 28px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;transition:opacity .2s}
+.cta-btn:hover{opacity:.85}
+@media(max-width:600px){.art-title{font-size:28px}.article-wrap{padding:24px 18px 80px}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Readability Scores Explained: Flesch-Kincaid, Gunning Fog & What to Target","description":"What readability scores mean, what scores to target for your audience, and how to improve readability in your writing.","datePublished":"2026-06-08","author":{"@type":"Organization","name":"WrdKit"},"publisher":{"@type":"Organization","name":"WrdKit","url":"https://wrdkit.com"}}
+  </script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html#tools">Tools</a></li>
+      <li><a href="../blog.html" style="color:var(--text);font-weight:600">Blog</a></li>
+      <li><a href="../about.html">About</a></li>
+    </ul>
+    <a href="../index.html#tools" class="nav-btn">Try Tools Free →</a>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <a href="../blog.html" class="back-link">← Back to Blog</a>
+  <span class="art-tag">Writing</span>
+  <h1 class="art-title">Readability scores explained: Flesch-Kincaid, Gunning Fog & what to target</h1>
+  <div class="art-meta">
+    <span>June 8, 2026</span>
+    <span>6 min read</span>
+    <span>By WrdKit Team</span>
+  </div>
+  <p class="art-intro">Readability scores are formulas that estimate how easy — or difficult — a piece of text is to read. They matter for SEO, content marketing, academic writing, and UX copy. But most writers misread what the scores mean, or target the wrong numbers for their audience. Here's the complete guide.</p>
+
+  <div class="art-body">
+
+    <h2>Why readability matters</h2>
+    <p>Google's quality rater guidelines explicitly value content that is "easy to read and understand." Studies consistently show that online readers scan rather than read — they bail on dense, complex paragraphs within seconds. Readable content means lower bounce rates, longer time on page, and higher conversion rates. It also directly affects SEO performance.</p>
+    <p>For academic and medical writing, readability scores help ensure documents are accessible to their intended audience — a patient information leaflet written at a university level is a usability failure, regardless of how accurate it is.</p>
+
+    <h2>The Flesch Reading Ease score</h2>
+    <p>The Flesch Reading Ease formula, developed by Rudolf Flesch in 1948, produces a score from 0 to 100. <strong>Higher = easier to read.</strong> It's the most widely used readability formula in the world.</p>
+    <p>The formula factors in average sentence length and average syllable count per word.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Score</th><th>Difficulty</th><th>Typical Content</th></tr></thead>
+      <tbody>
+        <tr><td>90–100</td><td>Very Easy</td><td>Children's books, simple instructions</td></tr>
+        <tr><td>80–90</td><td>Easy</td><td>Conversational English, SMS</td></tr>
+        <tr><td>70–80</td><td>Fairly Easy</td><td>Consumer blogs, tabloid newspapers</td></tr>
+        <tr><td>60–70</td><td>Standard</td><td>Most online articles, this guide</td></tr>
+        <tr><td>50–60</td><td>Fairly Difficult</td><td>Quality newspapers, professional reports</td></tr>
+        <tr><td>30–50</td><td>Difficult</td><td>Academic journals, legal documents</td></tr>
+        <tr><td>0–30</td><td>Very Difficult</td><td>Technical papers, scientific writing</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>Target for most web content:</strong> Aim for a Flesch Reading Ease score of <strong>60–70</strong>. This is the "standard" range — readable without being condescending. Blog posts, landing pages, and email marketing all perform best in this range.</div>
+
+    <h2>The Flesch-Kincaid Grade Level</h2>
+    <p>The Flesch-Kincaid Grade Level converts the same measurement into a US school grade level. A score of 8 means the content is readable by an 8th grader. A score of 12 means it requires a high school diploma. A score of 16 maps to a college senior.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Grade Level</th><th>Reading Level</th><th>Recommended For</th></tr></thead>
+      <tbody>
+        <tr><td>Grade 6</td><td>11–12 years old</td><td>Mass-market consumer content</td></tr>
+        <tr><td>Grade 8</td><td>13–14 years old</td><td>General online articles, most blogs</td></tr>
+        <tr><td>Grade 10</td><td>15–16 years old</td><td>Quality journalism, B2B content</td></tr>
+        <tr><td>Grade 12</td><td>17–18 years old</td><td>Professional reports, whitepapers</td></tr>
+        <tr><td>Grade 14–16</td><td>College level</td><td>Academic writing, legal content</td></tr>
+      </tbody>
+    </table>
+
+    <p>For most blogs and marketing content, <strong>Grade 7–9</strong> is the sweet spot. This isn't about dumbing down — it's about removing unnecessary complexity. Even highly educated readers prefer clear, direct language when reading online.</p>
+
+    <h2>Gunning Fog Index</h2>
+    <p>The Gunning Fog Index, developed by Robert Gunning in 1952, measures readability based on sentence length and the percentage of "complex words" (words with three or more syllables).</p>
+    <p>Like Flesch-Kincaid Grade Level, the Fog score maps roughly to US school years. A score of 12 means a 12th-grade reading level. A score of 17+ is considered college graduate level.</p>
+
+    <table class="data-table">
+      <thead><tr><th>Fog Index</th><th>Reading Level</th></tr></thead>
+      <tbody>
+        <tr><td>6</td><td>6th grade — very accessible</td></tr>
+        <tr><td>8</td><td>8th grade — ideal for general audiences</td></tr>
+        <tr><td>10–12</td><td>High school — quality newspapers</td></tr>
+        <tr><td>14–16</td><td>College — academic writing</td></tr>
+        <tr><td>17+</td><td>Graduate — extremely dense prose</td></tr>
+      </tbody>
+    </table>
+
+    <p>The Wall Street Journal historically targets a Fog Index of around 11–12. Time magazine targets 10. Most successful online content sits between 8 and 12.</p>
+
+    <h2>SMOG Index</h2>
+    <p>SMOG (Simple Measure of Gobbledygook) is widely used in healthcare communications because it's validated against real comprehension studies. It measures the number of polysyllabic words (3+ syllables) across a sample of 30 sentences.</p>
+    <p>For patient-facing health content, health authorities typically recommend a SMOG score of <strong>6 or below</strong> — roughly a 6th-grade reading level. This ensures that people with lower literacy levels, or those reading in a second language, can understand critical health information.</p>
+
+    <h2>How to improve your readability score</h2>
+    <p>You don't need to write like a children's book author to score well. These targeted changes move the needle the most:</p>
+
+    <h3>Shorten your sentences</h3>
+    <p>The single biggest driver of poor readability scores is long sentences. If your average sentence is over 20 words, your score will suffer. Aim for 15–17 words on average. Vary sentence length — a short sentence after a long one creates rhythm and prevents monotony.</p>
+
+    <h3>Swap complex words for simpler ones</h3>
+    <ul>
+      <li>"Utilise" → "use"</li>
+      <li>"Demonstrate" → "show"</li>
+      <li>"Approximately" → "about"</li>
+      <li>"Subsequently" → "then" or "after"</li>
+      <li>"Facilitate" → "help" or "enable"</li>
+    </ul>
+
+    <h3>Break up long paragraphs</h3>
+    <p>Online readers scan. A paragraph of 5+ sentences looks like a wall of text on mobile. Keep paragraphs to 2–3 sentences for web content. Use subheadings every 200–300 words so readers can navigate.</p>
+
+    <h3>Use active voice</h3>
+    <p>Passive voice adds syllables and obscures who is doing what. "The report was submitted by the team" → "The team submitted the report." Active voice is shorter, clearer, and scores better on readability formulas.</p>
+
+    <div class="callout"><strong>Quick win:</strong> Run your draft through a readability checker after writing, then search for your longest sentences. Splitting or simplifying just the top 5 longest sentences will often move your Flesch score by 5–10 points.</div>
+
+    <div class="cta-box">
+      <h3>Check your readability score — free</h3>
+      <p>Paste your text into WrdKit's readability checker to get your Flesch Reading Ease, Flesch-Kincaid Grade Level, and Gunning Fog Index instantly.</p>
+      <a href="../tools/word-counter.html" class="cta-btn">Check Readability Free →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a>
+  <ul class="footer-links">
+    <li><a href="../about.html">About</a></li>
+    <li><a href="../privacy.html">Privacy</a></li>
+    <li><a href="../terms.html">Terms</a></li>
+    <li><a href="../blog.html">Blog</a></li>
+  </ul>
+  <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+</footer>
+<script src="../js/tools.js"></script>
+</body>
+</html>

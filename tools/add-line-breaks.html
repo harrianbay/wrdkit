@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Line Breaks — Free Online Tool | WrdKit</title>
+  <meta name="description" content="Free online tool to add line breaks to any block of text instantly. No signup required."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#">Tools ▾</a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section">Text Analysis</div>
+            <a href="word-counter.html">Word Counter</a>
+            <a href="character-counter.html">Character Counter</a>
+            <a href="sentence-counter.html">Sentence Counter</a>
+            <a href="paragraph-counter.html">Paragraph Counter</a>
+            <a href="reading-time.html">Reading Time</a>
+            <a href="keyword-density.html">Keyword Density</a>
+            <a href="most-used-words.html">Most Used Words</a>
+            <div class="dropdown-section">Text Conversion</div>
+            <a href="uppercase.html">Uppercase</a>
+            <a href="lowercase.html">Lowercase</a>
+            <a href="title-case.html">Title Case</a>
+            <a href="reverse-text.html">Reverse Text</a>
+            <a href="remove-spaces.html">Remove Extra Spaces</a>
+            <a href="remove-line-breaks.html">Remove Line Breaks</a>
+            <div class="dropdown-section">Writing Tools</div>
+            <a href="random-word.html">Random Word Generator</a>
+            <a href="lorem-ipsum.html">Lorem Ipsum Generator</a>
+            <a href="text-repeater.html">Text Repeater</a>
+            <div class="dropdown-section">Social Media</div>
+            <a href="twitter-counter.html">Twitter Counter</a>
+            <a href="instagram-counter.html">Instagram Counter</a>
+            <a href="tiktok-counter.html">TikTok Bio Counter</a>
+          </div>
+        </li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+      <a href="word-counter.html" class="nav-btn">Try Free →</a>
+    </div>
+  </nav>
+
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="tool-hero-icon icon-blue">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h12"/></svg>
+      </div>
+      <div>
+        <h1>Add Line Breaks</h1>
+        <p>Add line breaks after every sentence or at custom intervals instantly.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-shell-wrap">
+    <div class="tool-shell">
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Input</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" onclick="clearText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+      <textarea id="input" placeholder="Paste your text here..."></textarea>
+      <div class="stat-cards">
+        <div class="stat-card">
+          <span class="stat-card-number" id="words">0</span>
+          <span class="stat-card-label">Words</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="chars">0</span>
+          <span class="stat-card-label">Characters</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="lines">0</span>
+          <span class="stat-card-label">Lines Added</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-shell-wrap" style="margin-top:16px;">
+    <div class="tool-shell">
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Output — With Line Breaks</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" onclick="copyOutput()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy
+          </button>
+        </div>
+      </div>
+      <div id="output" style="padding:24px; min-height:120px; font-size:15px; line-height:1.8; white-space:pre-wrap; word-break:break-word; color:var(--text); font-family:'Inter',sans-serif;"></div>
+    </div>
+  </div>
+
+  <div class="tool-content-wrap">
+    <div class="tool-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>How does the line break adder work?</h3>
+        <p>The tool adds a line break after every sentence ending with a period, exclamation mark, or question mark. This makes dense blocks of text easier to read.</p>
+      </div>
+      <div class="faq-item">
+        <h3>When would I need to add line breaks?</h3>
+        <p>Copying text from PDFs or documents often removes line breaks. This tool restores them, making the text readable again for emails, social posts, or documents.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it work with any language?</h3>
+        <p>It works with any text that uses standard sentence-ending punctuation. Languages with different punctuation systems may not split correctly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my text stored anywhere?</h3>
+        <p>No. Everything runs locally in your browser. Your text never leaves your device.</p>
+      </div>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related Tools</h2>
+      <div class="related-grid">
+        <a href="remove-line-breaks.html" class="related-card">
+          <div class="tool-icon icon-pink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></div>
+          <div><h4>Remove Line Breaks</h4><p>Remove unwanted breaks</p></div>
+        </a>
+        <a href="remove-spaces.html" class="related-card">
+          <div class="tool-icon icon-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg></div>
+          <div><h4>Remove Spaces</h4><p>Clean up extra spaces</p></div>
+        </a>
+        <a href="word-counter.html" class="related-card">
+          <div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div><h4>Word Counter</h4><p>Count words instantly</p></div>
+        </a>
+        <a href="sentence-counter.html" class="related-card">
+          <div class="tool-icon icon-green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="10" x2="3" y2="10"/><line x1="21" y1="6" x2="3" y2="6"/><line x1="21" y1="14" x2="3" y2="14"/></svg></div>
+          <div><h4>Sentence Counter</h4><p>Count sentences fast</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../terms.html">Terms</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('input');
+    const output = document.getElementById('output');
+
+    function update() {
+      const text = input.value;
+      const result = text.replace(/([.!?])\s+/g, '$1\n\n');
+      output.textContent = result;
+      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+      const lines = result === '' ? 0 : (result.match(/\n/g) || []).length;
+      document.getElementById('words').textContent = words;
+      document.getElementById('chars').textContent = text.length;
+      document.getElementById('lines').textContent = lines;
+    }
+
+    input.addEventListener('input', update);
+    function copyOutput() { navigator.clipboard.writeText(output.textContent); }
+    function clearText() {
+      input.value = '';
+      output.textContent = '';
+      ['words','chars','lines'].forEach(id => document.getElementById(id).textContent = '0');
+    }
+  </script>
+</body>
+</html>

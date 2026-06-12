@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Most Used Words Finder — Free Online Tool | WrdKit</title>
+  <meta name="description" content="Find the most used words in your text instantly. No signup required."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#">Tools ▾</a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section">Text Analysis</div>
+            <a href="word-counter.html">Word Counter</a>
+            <a href="character-counter.html">Character Counter</a>
+            <a href="sentence-counter.html">Sentence Counter</a>
+            <a href="paragraph-counter.html">Paragraph Counter</a>
+            <a href="reading-time.html">Reading Time</a>
+            <a href="keyword-density.html">Keyword Density</a>
+            <a href="most-used-words.html">Most Used Words</a>
+            <div class="dropdown-section">Text Conversion</div>
+            <a href="uppercase.html">Uppercase</a>
+            <a href="lowercase.html">Lowercase</a>
+            <a href="title-case.html">Title Case</a>
+            <a href="reverse-text.html">Reverse Text</a>
+            <a href="remove-spaces.html">Remove Extra Spaces</a>
+            <a href="remove-line-breaks.html">Remove Line Breaks</a>
+            <div class="dropdown-section">Writing Tools</div>
+            <a href="random-word.html">Random Word Generator</a>
+            <a href="lorem-ipsum.html">Lorem Ipsum Generator</a>
+            <a href="text-repeater.html">Text Repeater</a>
+            <div class="dropdown-section">Social Media</div>
+            <a href="twitter-counter.html">Twitter Counter</a>
+            <a href="instagram-counter.html">Instagram Counter</a>
+            <a href="tiktok-counter.html">TikTok Bio Counter</a>
+          </div>
+        </li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+      <a href="word-counter.html" class="nav-btn">Try Free →</a>
+    </div>
+  </nav>
+
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="tool-hero-icon icon-yellow">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      </div>
+      <div>
+        <h1>Most Used Words</h1>
+        <p>Find the most frequently used words in your text instantly.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-shell-wrap">
+    <div class="tool-shell">
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Editor</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" onclick="copyText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy
+          </button>
+          <button class="toolbar-btn" onclick="clearText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+      <textarea id="input" placeholder="Paste your text here to find the most used words..."></textarea>
+      <div class="stat-cards">
+        <div class="stat-card">
+          <span class="stat-card-number" id="total-words">0</span>
+          <span class="stat-card-label">Total Words</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="unique-words">0</span>
+          <span class="stat-card-label">Unique Words</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="top-count">0</span>
+          <span class="stat-card-label">Top Word Count</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="vocab-rich">0</span>
+          <span class="stat-card-label">Vocab Richness %</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="sentences">0</span>
+          <span class="stat-card-label">Sentences</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="paragraphs">0</span>
+          <span class="stat-card-label">Paragraphs</span>
+        </div>
+      </div>
+      <div id="chips-wrap" style="padding:20px; border-top:1px solid var(--border); display:none; flex-wrap:wrap; gap:8px;"></div>
+    </div>
+  </div>></svg></div>
+          <div><h4>Sentence Counter</h4><p>Count sentences fast</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../terms.html">Terms</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('input');
+    const chipsWrap = document.getElementById('chips-wrap');
+    const stopWords = new Set(['the','a','an','and','or','but','in','on','at','to','for','of','with','by','from','is','are','was','were','be','been','being','have','has','had','do','does','did','will','would','could','should','may','might','that','this','these','those','it','its','i','you','he','she','we','they','my','your','his','her','our','their','as','if','so','not','no','up','out','about','into','than','then','when','where','who','which','what','how','all','each','every','both','few','more','most','other','some','such','only','own','same','just','because','while','after','before','between','through','during','without','within']);
+
+    function animateNumber(el, newVal) {
+      const current = parseInt(el.textContent) || 0;
+      if (current === newVal) return;
+      const diff = newVal - current;
+      const steps = 12;
+      const step = diff / steps;
+      let count = 0;
+      const timer = setInterval(() => {
+        count++;
+        el.textContent = Math.round(current + step * count);
+        if (count >= steps) { el.textContent = newVal; clearInterval(timer); }
+      }, 16);
+    }
+
+    function update() {
+      const text = input.value;
+      const words = text.trim() === '' ? [] : text.trim().toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/).filter(w => w.length > 1);
+      const totalWords = words.length;
+      const uniqueWords = new Set(words).size;
+      const sentences = text.trim() === '' ? 0 : (text.match(/[^.!?]*[.!?]+/g) || []).length;
+      const paragraphs = text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(p => p.trim()).length || (text.trim() ? 1 : 0);
+      const vocabRich = totalWords > 0 ? Math.round((uniqueWords / totalWords) * 100) : 0;
+
+      const freq = {};
+      words.forEach(w => { if (!stopWords.has(w)) freq[w] = (freq[w] || 0) + 1; });
+      const sorted = Object.entries(freq).sort((a,b) => b[1]-a[1]).slice(0, 20);
+      const topCount = sorted[0] ? sorted[0][1] : 0;
+
+      animateNumber(document.getElementById('total-words'), totalWords);
+      animateNumber(document.getElementById('unique-words'), uniqueWords);
+      animateNumber(document.getElementById('top-count'), topCount);
+      animateNumber(document.getElementById('vocab-rich'), vocabRich);
+      animateNumber(document.getElementById('sentences'), sentences);
+      animateNumber(document.getElementById('paragraphs'), paragraphs);
+
+      if (sorted.length > 0) {
+        chipsWrap.style.display = 'flex';
+        chipsWrap.innerHTML = sorted.map(([word, count]) => `
+          <div style="
+            display:inline-flex;
+            align-items:center;
+            gap:6px;
+            padding:6px 12px;
+            background:white;
+            border:1px solid var(--border);
+            border-radius:999px;
+            font-size:13px;
+            font-weight:500;
+            color:var(--text);
+          ">
+            ${word}
+            <span style="
+              background:var(--accent);
+              color:white;
+              padding:2px 7px;
+              border-radius:999px;
+              font-size:11px;
+              font-weight:600;
+            ">${count}</span>
+          </div>
+        `).join('');
+      } else {
+        chipsWrap.style.display = 'none';
+        chipsWrap.innerHTML = '';
+      }
+    }
+
+    input.addEventListener('input', update);
+    function copyText() { navigator.clipboard.writeText(input.value); }
+    function clearText() {
+      input.value = '';
+      ['total-words','unique-words','top-count','vocab-rich','sentences','paragraphs'].forEach(id => {
+        document.getElementById(id).textContent = '0';
+      });
+      chipsWrap.style.display = 'none';
+      chipsWrap.innerHTML = '';
+    }
+  </script>
+</body>
+</html>

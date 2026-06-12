@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Slug Generator — Convert Text to URL Slug Free | WrdKit</title>
+<meta name="description" content="Free online slug generator. Convert any text to a URL-friendly slug instantly. No signup required."/>
+<link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+<nav><div class="nav-inner"><a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a><ul class="nav-links"><li class="nav-dropdown"><a href="#">Tools ▾</a><div class="nav-dropdown-menu"><div class="dropdown-section">Text Analysis</div><a href="word-counter.html">Word Counter</a><a href="character-counter.html">Character Counter</a><a href="sentence-counter.html">Sentence Counter</a><a href="paragraph-counter.html">Paragraph Counter</a><a href="reading-time.html">Reading Time</a><a href="keyword-density.html">Keyword Density</a><a href="most-used-words.html">Most Used Words</a><div class="dropdown-section">Text Conversion</div><a href="uppercase.html">Uppercase</a><a href="lowercase.html">Lowercase</a><a href="title-case.html">Title Case</a><a href="reverse-text.html">Reverse Text</a><a href="remove-spaces.html">Remove Extra Spaces</a><a href="remove-line-breaks.html">Remove Line Breaks</a><div class="dropdown-section">Writing Tools</div><a href="random-word.html">Random Word Generator</a><a href="lorem-ipsum.html">Lorem Ipsum Generator</a><a href="text-repeater.html">Text Repeater</a><div class="dropdown-section">Social Media</div><a href="twitter-counter.html">Twitter Counter</a><a href="instagram-counter.html">Instagram Counter</a><a href="tiktok-counter.html">TikTok Bio Counter</a></div></li><li><a href="../blog.html">Blog</a></li><li><a href="../about.html">About</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li></ul><a href="word-counter.html" class="nav-btn">Try Free →</a></div></nav>
+
+<div class="tool-hero"><div class="tool-hero-inner"><div class="tool-hero-icon icon-red"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><div><h1>Slug Generator</h1><p>Convert any text into a clean URL-friendly slug instantly.</p></div></div></div>
+
+<div class="tool-shell-wrap"><div class="tool-shell"><div class="tool-toolbar"><span class="tool-toolbar-title">Input</span><div class="tool-toolbar-actions"><button class="toolbar-btn" onclick="clearText()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>Clear</button></div></div>
+<textarea id="input" placeholder="Type or paste your title here..."></textarea>
+<div class="stat-cards"><div class="stat-card"><span class="stat-card-number" id="words">0</span><span class="stat-card-label">Words</span></div><div class="stat-card"><span class="stat-card-number" id="chars">0</span><span class="stat-card-label">Characters</span></div><div class="stat-card"><span class="stat-card-number" id="slug-len">0</span><span class="stat-card-label">Slug Length</span></div></div></div></div>
+
+<div class="tool-shell-wrap" style="margin-top:16px;"><div class="tool-shell"><div class="tool-toolbar"><span class="tool-toolbar-title">Output — URL Slug</span><div class="tool-toolbar-actions"><button class="toolbar-btn" onclick="copyOutput()"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button></div></div>
+<div id="output" style="padding:24px;min-height:80px;font-size:15px;line-height:1.8;white-space:pre-wrap;word-break:break-word;color:var(--accent);font-family:'Inter',sans-serif;font-weight:600;letter-spacing:0.3px;"></div></div></div>
+
+<div class="tool-content-wrap">
+<div class="tool-faq"><h2>Frequently Asked Questions</h2>
+<div class="faq-item"><h3>What is a URL slug?</h3><p>A slug is the part of a URL that identifies a specific page. For example in "wrdkit.com/tools/word-counter" the slug is "word-counter". Slugs should be lowercase, hyphenated, and contain no special characters.</p></div>
+<div class="faq-item"><h3>Why are slugs important for SEO?</h3><p>Clean slugs help search engines understand what your page is about. A slug like "how-to-count-words" ranks better than "page?id=123" because it contains relevant keywords.</p></div>
+<div class="faq-item"><h3>What does the slug generator do to my text?</h3><p>It converts your text to lowercase, replaces spaces with hyphens, removes special characters and accents, and strips any extra hyphens. The result is a clean URL-ready slug.</p></div>
+<div class="faq-item"><h3>Is my text stored anywhere?</h3><p>No. Everything runs locally in your browser. Your text never leaves your device.</p></div></div>
+
+<div class="related-tools"><h2>Related Tools</h2><div class="related-grid">
+<a href="lowercase.html" class="related-card"><div class="tool-icon icon-green"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="12" r="4"/><path d="M13 8v8"/></svg></div><div><h4>Lowercase</h4><p>Convert to lowercase</p></div></a>
+<a href="remove-spaces.html" class="related-card"><div class="tool-icon icon-teal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg></div><div><h4>Remove Spaces</h4><p>Clean up extra spaces</p></div></a>
+<a href="word-counter.html" class="related-card"><div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><div><h4>Word Counter</h4><p>Count words instantly</p></div></a>
+<a href="title-case.html" class="related-card"><div class="tool-icon icon-orange"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg></div><div><h4>Title Case</h4><p>Capitalize every word</p></div></a>
+</div></div></div>
+
+<footer><a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a><ul class="footer-links"><li><a href="../about.html">About</a></li><li><a href="../privacy.html">Privacy</a></li><li><a href="../terms.html">Terms</a></li><li><a href="../contact.html">Contact</a></li><li><a href="../blog.html">Blog</a></li></ul><p class="footer-copy">© 2026 WrdKit. All rights reserved.</p></footer>
+
+<script>
+const input = document.getElementById('input');
+const output = document.getElementById('output');
+
+function toSlug(text) {
+  return text.toString().toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
+
+function update() {
+  const text = input.value;
+  const slug = toSlug(text);
+  output.textContent = slug;
+  const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+  document.getElementById('words').textContent = words;
+  document.getElementById('chars').textContent = text.length;
+  document.getElementById('slug-len').textContent = slug.length;
+}
+
+input.addEventListener('input', update);
+function copyOutput() { navigator.clipboard.writeText(output.textContent); }
+function clearText() {
+  input.value = '';
+  output.textContent = '';
+  ['words','chars','slug-len'].forEach(id => document.getElementById(id).textContent = '0');
+}
+</script>
+</body>
+</html>

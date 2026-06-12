@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Twitter Character Counter — Stay Within 280 Characters | WrdKit</title>
+  <meta name="description" content="Free Twitter character counter. Stay within the 280 character limit instantly as you type. No signup required."/>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li class="nav-dropdown">
+          <a href="#">Tools ▾</a>
+          <div class="nav-dropdown-menu">
+            <div class="dropdown-section">Text Analysis</div>
+            <a href="word-counter.html">Word Counter</a>
+            <a href="character-counter.html">Character Counter</a>
+            <a href="sentence-counter.html">Sentence Counter</a>
+            <a href="paragraph-counter.html">Paragraph Counter</a>
+            <a href="reading-time.html">Reading Time</a>
+            <a href="keyword-density.html">Keyword Density</a>
+            <a href="most-used-words.html">Most Used Words</a>
+            <div class="dropdown-section">Text Conversion</div>
+            <a href="uppercase.html">Uppercase</a>
+            <a href="lowercase.html">Lowercase</a>
+            <a href="title-case.html">Title Case</a>
+            <a href="reverse-text.html">Reverse Text</a>
+            <a href="remove-spaces.html">Remove Extra Spaces</a>
+            <a href="remove-line-breaks.html">Remove Line Breaks</a>
+            <div class="dropdown-section">Writing Tools</div>
+            <a href="random-word.html">Random Word Generator</a>
+            <a href="lorem-ipsum.html">Lorem Ipsum Generator</a>
+            <a href="text-repeater.html">Text Repeater</a>
+            <div class="dropdown-section">Social Media</div>
+            <a href="twitter-counter.html">Twitter Counter</a>
+            <a href="instagram-counter.html">Instagram Counter</a>
+            <a href="tiktok-counter.html">TikTok Bio Counter</a>
+          </div>
+        </li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../privacy.html">Privacy</a></li>
+        <li><a href="../terms.html">Terms</a></li>
+      </ul>
+      <a href="word-counter.html" class="nav-btn">Try Free →</a>
+    </div>
+  </nav>
+
+  <div class="tool-hero">
+    <div class="tool-hero-inner">
+      <div class="tool-hero-icon icon-blue">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M4 20L20 4"/></svg>
+      </div>
+      <div>
+        <h1>Twitter Character Counter</h1>
+        <p>Stay within the 280 character limit as you type. Know exactly how much space you have left.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-shell-wrap">
+    <div class="tool-shell">
+      <div class="tool-toolbar">
+        <span class="tool-toolbar-title">Tweet Editor</span>
+        <div class="tool-toolbar-actions">
+          <button class="toolbar-btn" onclick="clearText()">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/></svg>
+            Clear
+          </button>
+        </div>
+      </div>
+
+      <textarea id="input" placeholder="Write your tweet here..." style="height:160px;"></textarea>
+
+      <div style="padding:16px 24px; border-top:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div id="ring-wrap" style="position:relative; width:48px; height:48px;">
+            <svg width="48" height="48" viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20" fill="none" stroke="var(--border)" stroke-width="4"/>
+              <circle id="ring" cx="24" cy="24" r="20" fill="none" stroke="var(--accent)" stroke-width="4"
+                stroke-dasharray="125.6" stroke-dashoffset="125.6"
+                stroke-linecap="round" transform="rotate(-90 24 24)"
+                style="transition: stroke-dashoffset 0.2s, stroke 0.2s;"/>
+            </svg>
+            <span id="remaining" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:11px; font-weight:700; font-family:'Syne',sans-serif;">280</span>
+          </div>
+          <div>
+            <div id="status-text" style="font-size:14px; font-weight:600; color:var(--text);">280 characters remaining</div>
+            <div style="font-size:12px; color:var(--muted);">Twitter limit: 280 characters</div>
+          </div>
+        </div>
+        <div id="over-badge" style="display:none; background:#FEE2E2; color:#DC2626; padding:6px 14px; border-radius:999px; font-size:13px; font-weight:600;">Over limit</div>
+      </div>
+
+      <div class="stat-cards">
+        <div class="stat-card">
+          <span class="stat-card-number" id="used">0</span>
+          <span class="stat-card-label">Used</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="left">280</span>
+          <span class="stat-card-label">Remaining</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="words">0</span>
+          <span class="stat-card-label">Words</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-number" id="pct">0</span>
+          <span class="stat-card-label">% Used</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tool-content-wrap">
+    <div class="tool-faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <h3>What is Twitter's character limit?</h3>
+        <p>Twitter allows 280 characters per tweet. This was doubled from the original 140 character limit in November 2017. URLs always count as 23 characters regardless of their actual length.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do spaces count as characters?</h3>
+        <p>Yes. Every space counts as one character toward your 280 limit, just like letters, numbers, and punctuation marks.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do emojis count as one character?</h3>
+        <p>Most emojis count as two characters on Twitter because they use Unicode characters that take up two code points. Keep this in mind when using emojis in tweets near the limit.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is my text stored anywhere?</h3>
+        <p>No. Everything runs locally in your browser. Your text never leaves your device.</p>
+      </div>
+    </div>
+
+    <div class="related-tools">
+      <h2>Related Tools</h2>
+      <div class="related-grid">
+        <a href="instagram-counter.html" class="related-card">
+          <div class="tool-icon icon-pink"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></div>
+          <div><h4>Instagram Counter</h4><p>Check caption length</p></div>
+        </a>
+        <a href="tiktok-counter.html" class="related-card">
+          <div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg></div>
+          <div><h4>TikTok Bio Counter</h4><p>Stay within 80 chars</p></div>
+        </a>
+        <a href="character-counter.html" class="related-card">
+          <div class="tool-icon icon-purple"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div>
+          <div><h4>Character Counter</h4><p>Count characters fast</p></div>
+        </a>
+        <a href="word-counter.html" class="related-card">
+          <div class="tool-icon icon-blue"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div><h4>Word Counter</h4><p>Count words instantly</p></div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="../index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../privacy.html">Privacy</a></li>
+      <li><a href="../terms.html">Terms</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+      <li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const input = document.getElementById('input');
+    const LIMIT = 280;
+    const circumference = 125.6;
+
+    function update() {
+      const text = input.value;
+      const used = text.length;
+      const left = LIMIT - used;
+      const pct = Math.min(100, Math.round((used / LIMIT) * 100));
+      const words = text.trim() === '' ? 0 : text.trim().split(/\s+/).length;
+
+      document.getElementById('used').textContent = used;
+      document.getElementById('left').textContent = Math.max(0, left);
+      document.getElementById('words').textContent = words;
+      document.getElementById('pct').textContent = pct;
+      document.getElementById('remaining').textContent = left >= 0 ? left : '-' + Math.abs(left);
+      document.getElementById('status-text').textContent = left >= 0
+        ? `${left} character${left !== 1 ? 's' : ''} remaining`
+        : `${Math.abs(left)} character${Math.abs(left) !== 1 ? 's' : ''} over limit`;
+
+      const ring = document.getElementById('ring');
+      const offset = circumference - (Math.min(used, LIMIT) / LIMIT) * circumference;
+      ring.style.strokeDashoffset = offset;
+      ring.style.stroke = left < 0 ? '#DC2626' : left < 20 ? '#F59E0B' : 'var(--accent)';
+
+      document.getElementById('over-badge').style.display = left < 0 ? 'block' : 'none';
+      document.getElementById('remaining').style.color = left < 0 ? '#DC2626' : left < 20 ? '#F59E0B' : 'var(--text)';
+    }
+
+    input.addEventListener('input', update);
+    function clearText() {
+      input.value = '';
+      update();
+    }
+  </script>
+</body>
+</html>

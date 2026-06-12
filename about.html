@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About WrdKit — Free Online Text Tools, Word Counter, Character Counter & More</title>
+  <meta name="description" content="WrdKit is a free online text tools website with 21+ tools including word counter, character counter, case converter, keyword density checker, and more. No signup. No ads. 100% browser-based."/>
+  <meta name="keywords" content="free online text tools, word counter online free, character counter, text analysis tool, case converter, keyword density checker, reading time calculator, typing speed test, lorem ipsum generator, free writing tools, no signup text tools, browser based text tools"/>
+  <meta property="og:title" content="About WrdKit — Free Online Text Tools"/>
+  <meta property="og:description" content="21+ free browser-based text tools. No signup, no ads, no data collection. Word counter, character counter, case converter and more."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://wrdkit.com/about.html"/>
+  <link rel="canonical" href="https://wrdkit.com/about.html"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+@font-face {
+  font-family: 'Syne';
+  src: url('fonts/Syne-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Syne';
+  src: url('fonts/Syne-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+}
+    .about-hero{padding:100px 40px 60px;max-width:900px;margin:0 auto;text-align:center}
+    .about-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);backdrop-filter:blur(10px);border-radius:999px;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--accent);margin-bottom:28px;box-shadow:0 2px 8px rgba(0,0,0,0.06)}
+    .about-hero h1{font-family:'Inter',sans-serif;font-size:60px;font-weight:800;letter-spacing:-3px;line-height:1.02;margin-bottom:22px;-webkit-font-smoothing:antialiased}
+    .about-hero h1 span{background:linear-gradient(135deg,var(--accent),#7C3AED);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .about-hero p{font-size:18px;color:var(--muted);line-height:1.7;max-width:620px;margin:0 auto 40px}
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:900px;margin:0 auto 80px;padding:0 40px}
+    .stat-card{background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);border-radius:20px;padding:28px 20px;text-align:center;backdrop-filter:blur(10px);box-shadow:0 2px 12px rgba(0,0,0,0.05)}
+    .stat-card .num{font-family:'Inter',sans-serif;font-size:42px;font-weight:800;letter-spacing:-2px;color:var(--accent);-webkit-font-smoothing:antialiased}
+    .stat-card .lbl{font-size:13px;color:var(--muted);margin-top:4px;font-weight:500}
+    .about-section{max-width:900px;margin:0 auto 70px;padding:0 40px}
+    .section-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:12px}
+    .section-title{font-family:'Inter',sans-serif;font-size:34px;font-weight:800;letter-spacing:-1.5px;line-height:1.1;margin-bottom:20px;-webkit-font-smoothing:antialiased}
+    .section-body{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:20px}
+    .values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+    .value-card{background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);border-radius:20px;padding:28px;backdrop-filter:blur(10px);box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+    .value-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:16px}
+    .value-card h3{font-family:'Inter',sans-serif;font-size:16px;font-weight:800;margin-bottom:8px;-webkit-font-smoothing:antialiased}
+    .value-card p{font-size:14px;color:var(--muted);line-height:1.7;margin:0}
+    .tools-mention-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+    .tool-mention-pill{background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);border-radius:12px;padding:12px 16px;backdrop-filter:blur(10px);display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);transition:all .2s;font-size:14px;font-weight:500}
+    .tool-mention-pill:hover{border-color:rgba(47,60,237,.2);transform:translateY(-2px);color:var(--accent)}
+    .tool-mention-pill .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+    .audience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:28px}
+    .audience-card{background:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.7);border-radius:20px;padding:24px;backdrop-filter:blur(10px)}
+    .audience-card h3{font-family:'Inter',sans-serif;font-size:15px;font-weight:800;margin-bottom:8px;-webkit-font-smoothing:antialiased}
+    .audience-card p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}
+    .about-cta{max-width:900px;margin:0 auto 80px;padding:0 40px}
+    .cta-glass{background:linear-gradient(135deg,rgba(47,60,237,.07),rgba(255,255,255,.9));border:1px solid rgba(47,60,237,.12);border-radius:28px;padding:56px 48px;text-align:center}
+    .cta-glass h2{font-family:'Inter',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1.5px;margin-bottom:16px;-webkit-font-smoothing:antialiased}
+    .cta-glass p{font-size:16px;color:var(--muted);max-width:500px;margin:0 auto 32px;line-height:1.7}
+    .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    .btn-primary{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:white;padding:13px 26px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;transition:opacity .2s}
+    .btn-primary:hover{opacity:.85}
+    .btn-secondary{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.9);border:1px solid var(--border);color:var(--text);padding:13px 26px;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:all .2s}
+    .btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+    @media(max-width:768px){
+      .about-hero h1{font-size:36px}
+      .stats-row{grid-template-columns:repeat(2,1fr)}
+      .values-grid{grid-template-columns:1fr}
+      .tools-mention-grid{grid-template-columns:repeat(2,1fr)}
+      .audience-grid{grid-template-columns:1fr}
+      .about-hero,.about-section,.about-cta{padding-left:20px;padding-right:20px}
+      .stats-row{padding:0 20px}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WrdKit",
+    "url": "https://wrdkit.com",
+    "description": "Free online text tools — word counter, character counter, case converter, keyword density checker, reading time calculator, typing speed test, and 15+ more tools.",
+    "foundingDate": "2026",
+    "sameAs": []
+  }
+  </script>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Wrd<span>Kit</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#tools">Tools</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html" style="color:var(--text);font-weight:600">About</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+      <a href="index.html#tools" class="nav-btn">Try Tools Free →</a>
+    </div>
+  </nav>
+
+  <div class="about-hero">
+    <div class="about-badge">✦ Free online text tools since 2026</div>
+    <h1>Every text tool you need,<br/><span>completely free</span></h1>
+    <p>WrdKit is a suite of 21+ free online text tools — word counter, character counter, case converter, keyword density checker, typing speed test, and more. No signup. No ads. No data collected. Just fast, reliable tools that work in your browser.</p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">21+</div><div class="lbl">Free tools</div></div>
+    <div class="stat-card"><div class="num">0</div><div class="lbl">Signups needed</div></div>
+    <div class="stat-card"><div class="num">100%</div><div class="lbl">Browser-based</div></div>
+    <div class="stat-card"><div class="num">0</div><div class="lbl">Data collected</div></div>
+  </div>
+
+  <div class="about-section">
+    <div class="section-eyebrow">What is WrdKit</div>
+    <h2 class="section-title">The free text tools platform built for writers, students, SEOs and developers</h2>
+    <p class="section-body">WrdKit is a free, browser-based text tools website with everything you need to write, analyze, convert, and optimize text online. Whether you're a blogger checking your word count for SEO, a student counting characters for a college essay, a social media manager counting Twitter characters, or a developer generating lorem ipsum placeholder text — WrdKit has the tool you need, available instantly, with no account required.</p>
+    <p class="section-body">Every tool on WrdKit runs entirely in your browser. Your text is never sent to a server, never stored, never logged. When you close the tab, it's gone. This is the only way a text tool website should work.</p>
+  </div>
+
+  <div class="about-section">
+    <div class="section-eyebrow">Our values</div>
+    <h2 class="section-title">Built on three non-negotiable principles</h2>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon" style="background:#EEF2FF">🆓</div>
+        <h3>Free forever, no strings</h3>
+        <p>Every tool on WrdKit is and will remain completely free. No premium tiers, no "unlock full results", no freemium bait-and-switch. Free means free.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" style="background:#ECFDF5">🔒</div>
+        <h3>Zero data collection</h3>
+        <p>We don't collect, store, or process your text. All tools run client-side in your browser. There's no backend server receiving your words, essays, or documents.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-icon" style="background:#FFF7ED">⚡</div>
+        <h3>Instant, no friction</h3>
+        <p>No signup forms. No email verification. No download required. Open any tool and it works immediately. That's how online tools should work.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="section-eyebrow">All tools</div>
+    <h2 class="section-title">21+ free text tools — all in one place</h2>
+    <p class="section-body">WrdKit covers every common text analysis, conversion, and writing task. Here's every tool available — all free, all instant, no signup:</p>
+    <div class="tools-mention-grid">
+      <a href="tools/word-counter.html" class="tool-mention-pill"><span class="dot" style="background:#6366F1"></span>Word Counter</a>
+      <a href="tools/character-counter.html" class="tool-mention-pill"><span class="dot" style="background:#8B5CF6"></span>Character Counter</a>
+      <a href="tools/reading-time.html" class="tool-mention-pill"><span class="dot" style="background:#EC4899"></span>Reading Time Estimator</a>
+      <a href="tools/sentence-counter.html" class="tool-mention-pill"><span class="dot" style="background:#14B8A6"></span>Sentence Counter</a>
+      <a href="tools/paragraph-counter.html" class="tool-mention-pill"><span class="dot" style="background:#F59E0B"></span>Paragraph Counter</a>
+      <a href="tools/keyword-density.html" class="tool-mention-pill"><span class="dot" style="background:#10B981"></span>Keyword Density Checker</a>
+      <a href="tools/readability-score.html" class="tool-mention-pill"><span class="dot" style="background:#3B82F6"></span>Readability Score</a>
+      <a href="tools/duplicate-word-finder.html" class="tool-mention-pill"><span class="dot" style="background:#EF4444"></span>Duplicate Word Finder</a>
+      <a href="tools/longest-word-finder.html" class="tool-mention-pill"><span class="dot" style="background:#F97316"></span>Longest Word Finder</a>
+      <a href="tools/case-converter.html" class="tool-mention-pill"><span class="dot" style="background:#6366F1"></span>Case Converter</a>
+      <a href="tools/text-reverser.html" class="tool-mention-pill"><span class="dot" style="background:#8B5CF6"></span>Text Reverser</a>
+      <a href="tools/slug-generator.html" class="tool-mention-pill"><span class="dot" style="background:#14B8A6"></span>URL Slug Generator</a>
+      <a href="tools/remove-extra-spaces.html" class="tool-mention-pill"><span class="dot" style="background:#F59E0B"></span>Remove Extra Spaces</a>
+      <a href="tools/sort-text.html" class="tool-mention-pill"><span class="dot" style="background:#10B981"></span>Sort Text</a>
+      <a href="tools/text-to-binary.html" class="tool-mention-pill"><span class="dot" style="background:#3B82F6"></span>Text to Binary</a>
+      <a href="tools/random-word-generator.html" class="tool-mention-pill"><span class="dot" style="background:#EC4899"></span>Random Word Generator</a>
+      <a href="tools/lorem-ipsum.html" class="tool-mention-pill"><span class="dot" style="background:#EF4444"></span>Lorem Ipsum Generator</a>
+      <a href="tools/text-repeater.html" class="tool-mention-pill"><span class="dot" style="background:#F97316"></span>Text Repeater</a>
+      <a href="tools/typing-speed.html" class="tool-mention-pill"><span class="dot" style="background:#6366F1"></span>Typing Speed Test</a>
+      <a href="tools/twitter-counter.html" class="tool-mention-pill"><span class="dot" style="background:#1DA1F2"></span>Twitter Character Counter</a>
+      <a href="tools/instagram-counter.html" class="tool-mention-pill"><span class="dot" style="background:#E1306C"></span>Instagram Caption Counter</a>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <div class="section-eyebrow">Who uses WrdKit</div>
+    <h2 class="section-title">Built for every person who works with words</h2>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <h3>✍️ Writers & bloggers</h3>
+        <p>Use the free word counter to hit blog post targets, check reading time before publishing, and run the readability score to make sure your content is accessible to your audience.</p>
+      </div>
+      <div class="audience-card">
+        <h3>🎓 Students & academics</h3>
+        <p>Count words and characters for college application essays (650-word Common App limit), check paragraph counts for assignments, and use the reading time estimator to gauge how long your paper is.</p>
+      </div>
+      <div class="audience-card">
+        <h3>🔍 SEO professionals</h3>
+        <p>Use the keyword density checker to monitor keyword usage in your articles, the word counter to hit ideal SEO content lengths, and the readability score to optimize for Flesch reading ease.</p>
+      </div>
+      <div class="audience-card">
+        <h3>📱 Social media managers</h3>
+        <p>Never get cut off again. Use the Twitter character counter (280-char limit), Instagram caption counter (2,200 chars), and TikTok bio counter to write posts that fit perfectly on every platform.</p>
+      </div>
+      <div class="audience-card">
+        <h3>💻 Developers & designers</h3>
+        <p>Generate lorem ipsum placeholder text in seconds, convert text to binary, create URL slugs from titles, convert case for variable names, and remove extra spaces from messy data.</p>
+      </div>
+      <div class="audience-card">
+        <h3>🎯 Content marketers</h3>
+        <p>Check keyword density across blog drafts, estimate reading time for email optimization, generate random words for brainstorming, and count sentences to pace your copy.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-cta">
+    <div class="cta-glass">
+      <h2>Start using WrdKit free — right now</h2>
+      <p>No account. No email. No download. Pick any tool and start working in seconds. Every tool on WrdKit is free, instant, and private.</p>
+      <div class="cta-btns">
+        <a href="tools/word-counter.html" class="btn-primary">Free word counter →</a>
+        <a href="index.html#tools" class="btn-secondary">Browse all 21+ tools</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <a href="index.html" class="footer-logo">Wrd<span>Kit</span></a>
+    <ul class="footer-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="terms.html">Terms</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <p class="footer-copy">© 2026 WrdKit. All rights reserved.</p>
+  </footer>
+  <script src="js/tools.js"></script>
+</body>
+</html>
